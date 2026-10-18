@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "description": "A separate source copy built WASM and passed tests with Cargo offline/locked using cached dependencies and the installed Rust target.",
+  "commands": [
+    {
+      "command": [
+        "cargo",
+        "build",
+        "--offline",
+        "--locked",
+        "--release",
+        "--lib",
+        "--target",
+        "wasm32-unknown-unknown"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "wasm_bytes": 399858
+}

@@ -1,0 +1,5808 @@
+{
+  "rx": [
+    {
+      "id": 1,
+      "sphere_cd": -350,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 2,
+      "sphere_cd": -150,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 3,
+      "sphere_cd": 425,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 4,
+      "sphere_cd": 325,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 5,
+      "sphere_cd": -950,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 6,
+      "sphere_cd": 175,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 7,
+      "sphere_cd": -850,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 8,
+      "sphere_cd": -275,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 9,
+      "sphere_cd": -75,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 10,
+      "sphere_cd": 300,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 11,
+      "sphere_cd": -300,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 12,
+      "sphere_cd": -850,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 13,
+      "sphere_cd": -200,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 14,
+      "sphere_cd": -275,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 15,
+      "sphere_cd": -200,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 16,
+      "sphere_cd": 50,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 17,
+      "sphere_cd": 175,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 18,
+      "sphere_cd": -900,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 19,
+      "sphere_cd": 0,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 20,
+      "sphere_cd": -975,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 21,
+      "sphere_cd": 250,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 22,
+      "sphere_cd": 25,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 23,
+      "sphere_cd": -900,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 24,
+      "sphere_cd": 225,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 25,
+      "sphere_cd": -1050,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 26,
+      "sphere_cd": -650,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 27,
+      "sphere_cd": -50,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 28,
+      "sphere_cd": -300,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 29,
+      "sphere_cd": -750,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 30,
+      "sphere_cd": 425,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 31,
+      "sphere_cd": -200,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 32,
+      "sphere_cd": -175,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 33,
+      "sphere_cd": 475,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 34,
+      "sphere_cd": 450,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 35,
+      "sphere_cd": 450,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 36,
+      "sphere_cd": -125,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 37,
+      "sphere_cd": -250,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 38,
+      "sphere_cd": 425,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 39,
+      "sphere_cd": -825,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 40,
+      "sphere_cd": -725,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 41,
+      "sphere_cd": -275,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 42,
+      "sphere_cd": -150,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 43,
+      "sphere_cd": -250,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 44,
+      "sphere_cd": -525,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 45,
+      "sphere_cd": -425,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 46,
+      "sphere_cd": -50,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 47,
+      "sphere_cd": 50,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 48,
+      "sphere_cd": 475,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 49,
+      "sphere_cd": 75,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 50,
+      "sphere_cd": 150,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 51,
+      "sphere_cd": -300,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 52,
+      "sphere_cd": -550,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 53,
+      "sphere_cd": -525,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 54,
+      "sphere_cd": -275,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 55,
+      "sphere_cd": -450,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 56,
+      "sphere_cd": -75,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 57,
+      "sphere_cd": 175,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 58,
+      "sphere_cd": -275,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 59,
+      "sphere_cd": 625,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 60,
+      "sphere_cd": -100,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 61,
+      "sphere_cd": -550,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 62,
+      "sphere_cd": 275,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 63,
+      "sphere_cd": 125,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 64,
+      "sphere_cd": -200,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 65,
+      "sphere_cd": 225,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 66,
+      "sphere_cd": -575,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 67,
+      "sphere_cd": -200,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 68,
+      "sphere_cd": -50,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 69,
+      "sphere_cd": 25,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 70,
+      "sphere_cd": 225,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 71,
+      "sphere_cd": -600,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 72,
+      "sphere_cd": -800,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 73,
+      "sphere_cd": 100,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 74,
+      "sphere_cd": -875,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 75,
+      "sphere_cd": 0,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 76,
+      "sphere_cd": 150,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 77,
+      "sphere_cd": 475,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 78,
+      "sphere_cd": -275,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 79,
+      "sphere_cd": 150,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 80,
+      "sphere_cd": -375,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 81,
+      "sphere_cd": -500,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 82,
+      "sphere_cd": 250,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 83,
+      "sphere_cd": -625,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 84,
+      "sphere_cd": 200,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 85,
+      "sphere_cd": -500,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 86,
+      "sphere_cd": -125,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 87,
+      "sphere_cd": 100,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 88,
+      "sphere_cd": -375,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 89,
+      "sphere_cd": -400,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 90,
+      "sphere_cd": -700,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 91,
+      "sphere_cd": 75,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 92,
+      "sphere_cd": 250,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 93,
+      "sphere_cd": 100,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 94,
+      "sphere_cd": -150,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 95,
+      "sphere_cd": 225,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 96,
+      "sphere_cd": -575,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 97,
+      "sphere_cd": -450,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 98,
+      "sphere_cd": -625,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 99,
+      "sphere_cd": -150,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 100,
+      "sphere_cd": -100,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 101,
+      "sphere_cd": -425,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 102,
+      "sphere_cd": 225,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 103,
+      "sphere_cd": 450,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 104,
+      "sphere_cd": 475,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 105,
+      "sphere_cd": 475,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 106,
+      "sphere_cd": -300,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 107,
+      "sphere_cd": 375,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 108,
+      "sphere_cd": -25,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 109,
+      "sphere_cd": -625,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 110,
+      "sphere_cd": 0,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 111,
+      "sphere_cd": -300,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 112,
+      "sphere_cd": 250,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 113,
+      "sphere_cd": -50,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 114,
+      "sphere_cd": -600,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 115,
+      "sphere_cd": 600,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 116,
+      "sphere_cd": -225,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 117,
+      "sphere_cd": -75,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 118,
+      "sphere_cd": 175,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 119,
+      "sphere_cd": 0,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 120,
+      "sphere_cd": -375,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 121,
+      "sphere_cd": -325,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 122,
+      "sphere_cd": -225,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 123,
+      "sphere_cd": 275,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 124,
+      "sphere_cd": -375,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 125,
+      "sphere_cd": 600,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 126,
+      "sphere_cd": 175,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 127,
+      "sphere_cd": -25,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 128,
+      "sphere_cd": -450,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 129,
+      "sphere_cd": -225,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 130,
+      "sphere_cd": -650,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 131,
+      "sphere_cd": 350,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 132,
+      "sphere_cd": -225,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 133,
+      "sphere_cd": 0,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 134,
+      "sphere_cd": 325,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 135,
+      "sphere_cd": -100,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 136,
+      "sphere_cd": -150,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 137,
+      "sphere_cd": -200,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 138,
+      "sphere_cd": -675,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 139,
+      "sphere_cd": -700,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 140,
+      "sphere_cd": 625,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 141,
+      "sphere_cd": 200,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 142,
+      "sphere_cd": -450,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 143,
+      "sphere_cd": -100,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 144,
+      "sphere_cd": 200,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 145,
+      "sphere_cd": 375,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 146,
+      "sphere_cd": -300,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 147,
+      "sphere_cd": -175,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 148,
+      "sphere_cd": -925,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 149,
+      "sphere_cd": 50,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 150,
+      "sphere_cd": 150,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 151,
+      "sphere_cd": -175,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 152,
+      "sphere_cd": -325,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 153,
+      "sphere_cd": 0,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 154,
+      "sphere_cd": 500,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 155,
+      "sphere_cd": -800,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 156,
+      "sphere_cd": 400,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 157,
+      "sphere_cd": -525,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 158,
+      "sphere_cd": -1025,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 159,
+      "sphere_cd": -475,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 160,
+      "sphere_cd": -50,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 161,
+      "sphere_cd": 200,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 162,
+      "sphere_cd": 375,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 163,
+      "sphere_cd": -550,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 164,
+      "sphere_cd": -425,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 165,
+      "sphere_cd": 200,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 166,
+      "sphere_cd": -775,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 167,
+      "sphere_cd": 575,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 168,
+      "sphere_cd": 400,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 169,
+      "sphere_cd": 450,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 170,
+      "sphere_cd": -825,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 171,
+      "sphere_cd": -150,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 172,
+      "sphere_cd": -325,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 173,
+      "sphere_cd": -150,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 174,
+      "sphere_cd": -975,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 175,
+      "sphere_cd": 500,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 176,
+      "sphere_cd": -600,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 177,
+      "sphere_cd": 550,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 178,
+      "sphere_cd": -175,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 179,
+      "sphere_cd": -500,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 180,
+      "sphere_cd": 0,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 181,
+      "sphere_cd": -400,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 182,
+      "sphere_cd": -1025,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 183,
+      "sphere_cd": 25,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 184,
+      "sphere_cd": -25,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 185,
+      "sphere_cd": -825,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 186,
+      "sphere_cd": -350,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 187,
+      "sphere_cd": 25,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 188,
+      "sphere_cd": 375,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 189,
+      "sphere_cd": 250,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 190,
+      "sphere_cd": -475,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 191,
+      "sphere_cd": -1000,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 192,
+      "sphere_cd": -700,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 193,
+      "sphere_cd": -250,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 194,
+      "sphere_cd": -300,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 195,
+      "sphere_cd": -575,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 196,
+      "sphere_cd": 0,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 197,
+      "sphere_cd": -25,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 198,
+      "sphere_cd": 100,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 199,
+      "sphere_cd": -250,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 200,
+      "sphere_cd": 650,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 201,
+      "sphere_cd": -675,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 202,
+      "sphere_cd": -475,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 203,
+      "sphere_cd": -250,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 204,
+      "sphere_cd": 650,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 205,
+      "sphere_cd": -125,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 206,
+      "sphere_cd": -375,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 207,
+      "sphere_cd": -725,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 208,
+      "sphere_cd": -800,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 209,
+      "sphere_cd": -900,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 210,
+      "sphere_cd": -150,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 211,
+      "sphere_cd": -125,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 212,
+      "sphere_cd": -400,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 213,
+      "sphere_cd": 250,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 214,
+      "sphere_cd": 125,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 215,
+      "sphere_cd": 50,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 216,
+      "sphere_cd": 0,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 217,
+      "sphere_cd": 275,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 218,
+      "sphere_cd": 525,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 219,
+      "sphere_cd": -175,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 220,
+      "sphere_cd": -500,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 221,
+      "sphere_cd": -600,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 222,
+      "sphere_cd": -575,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 223,
+      "sphere_cd": 125,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 224,
+      "sphere_cd": -175,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 225,
+      "sphere_cd": 475,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 226,
+      "sphere_cd": -350,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 227,
+      "sphere_cd": -75,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 228,
+      "sphere_cd": 475,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 229,
+      "sphere_cd": -200,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 230,
+      "sphere_cd": -300,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 231,
+      "sphere_cd": 200,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 232,
+      "sphere_cd": -525,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 233,
+      "sphere_cd": -475,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 234,
+      "sphere_cd": -275,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 235,
+      "sphere_cd": -350,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 236,
+      "sphere_cd": 200,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 237,
+      "sphere_cd": -225,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 238,
+      "sphere_cd": 300,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 239,
+      "sphere_cd": -25,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 240,
+      "sphere_cd": 575,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 241,
+      "sphere_cd": -975,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 242,
+      "sphere_cd": -650,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 243,
+      "sphere_cd": 525,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 244,
+      "sphere_cd": -725,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 245,
+      "sphere_cd": 0,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 246,
+      "sphere_cd": -525,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 247,
+      "sphere_cd": -150,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 248,
+      "sphere_cd": -700,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 249,
+      "sphere_cd": 300,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 250,
+      "sphere_cd": -575,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 251,
+      "sphere_cd": -1000,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 252,
+      "sphere_cd": -525,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 253,
+      "sphere_cd": -575,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 254,
+      "sphere_cd": 250,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 255,
+      "sphere_cd": 175,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 256,
+      "sphere_cd": 525,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 257,
+      "sphere_cd": -200,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 258,
+      "sphere_cd": 75,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 259,
+      "sphere_cd": -125,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 260,
+      "sphere_cd": -225,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 261,
+      "sphere_cd": -475,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 262,
+      "sphere_cd": -625,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 263,
+      "sphere_cd": 50,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 264,
+      "sphere_cd": -500,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 265,
+      "sphere_cd": -675,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 266,
+      "sphere_cd": -250,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 267,
+      "sphere_cd": 600,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 268,
+      "sphere_cd": 250,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 269,
+      "sphere_cd": 175,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 270,
+      "sphere_cd": -25,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 271,
+      "sphere_cd": 125,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 272,
+      "sphere_cd": -425,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 273,
+      "sphere_cd": -50,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 274,
+      "sphere_cd": 375,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 275,
+      "sphere_cd": -350,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 276,
+      "sphere_cd": -850,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 277,
+      "sphere_cd": -775,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 278,
+      "sphere_cd": -25,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 279,
+      "sphere_cd": -425,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 280,
+      "sphere_cd": -450,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 281,
+      "sphere_cd": -200,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 282,
+      "sphere_cd": -375,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 283,
+      "sphere_cd": -275,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 284,
+      "sphere_cd": 25,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 285,
+      "sphere_cd": 275,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 286,
+      "sphere_cd": 75,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 287,
+      "sphere_cd": 125,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 288,
+      "sphere_cd": 525,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 289,
+      "sphere_cd": -1025,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 290,
+      "sphere_cd": 50,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 291,
+      "sphere_cd": 275,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 292,
+      "sphere_cd": -625,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 293,
+      "sphere_cd": -350,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 294,
+      "sphere_cd": 50,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 295,
+      "sphere_cd": 625,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 296,
+      "sphere_cd": 250,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 297,
+      "sphere_cd": 350,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 298,
+      "sphere_cd": -250,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 299,
+      "sphere_cd": 250,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 300,
+      "sphere_cd": 350,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 301,
+      "sphere_cd": -175,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 302,
+      "sphere_cd": -350,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 303,
+      "sphere_cd": -675,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 304,
+      "sphere_cd": -650,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 305,
+      "sphere_cd": 200,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 306,
+      "sphere_cd": 75,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 307,
+      "sphere_cd": 75,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 308,
+      "sphere_cd": 350,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 309,
+      "sphere_cd": -400,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 310,
+      "sphere_cd": -550,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 311,
+      "sphere_cd": -225,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 312,
+      "sphere_cd": -775,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 313,
+      "sphere_cd": 0,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 314,
+      "sphere_cd": 25,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 315,
+      "sphere_cd": -175,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 316,
+      "sphere_cd": 75,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 317,
+      "sphere_cd": -600,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 318,
+      "sphere_cd": 275,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 319,
+      "sphere_cd": -700,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 320,
+      "sphere_cd": -50,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 321,
+      "sphere_cd": 375,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 322,
+      "sphere_cd": 400,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 323,
+      "sphere_cd": -1050,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 324,
+      "sphere_cd": -450,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 325,
+      "sphere_cd": 100,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 326,
+      "sphere_cd": 25,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 327,
+      "sphere_cd": -850,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 328,
+      "sphere_cd": -25,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 329,
+      "sphere_cd": 150,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 330,
+      "sphere_cd": -350,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 331,
+      "sphere_cd": 350,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 332,
+      "sphere_cd": -675,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 333,
+      "sphere_cd": -350,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 334,
+      "sphere_cd": -700,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 335,
+      "sphere_cd": 200,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 336,
+      "sphere_cd": 500,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 337,
+      "sphere_cd": -875,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 338,
+      "sphere_cd": 125,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 339,
+      "sphere_cd": -175,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 340,
+      "sphere_cd": -450,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 341,
+      "sphere_cd": -200,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 342,
+      "sphere_cd": -1025,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 343,
+      "sphere_cd": 225,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 344,
+      "sphere_cd": 75,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 345,
+      "sphere_cd": -75,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 346,
+      "sphere_cd": -25,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 347,
+      "sphere_cd": 350,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 348,
+      "sphere_cd": -300,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 349,
+      "sphere_cd": -675,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 350,
+      "sphere_cd": -625,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 351,
+      "sphere_cd": 25,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 352,
+      "sphere_cd": 200,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 353,
+      "sphere_cd": -375,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 354,
+      "sphere_cd": -800,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 355,
+      "sphere_cd": 125,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 356,
+      "sphere_cd": 475,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 357,
+      "sphere_cd": 400,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 358,
+      "sphere_cd": -75,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 359,
+      "sphere_cd": 625,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 360,
+      "sphere_cd": -175,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 361,
+      "sphere_cd": -700,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 362,
+      "sphere_cd": -675,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 363,
+      "sphere_cd": 525,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 364,
+      "sphere_cd": -925,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 365,
+      "sphere_cd": 150,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 366,
+      "sphere_cd": -500,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 367,
+      "sphere_cd": 75,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 368,
+      "sphere_cd": -125,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 369,
+      "sphere_cd": 325,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 370,
+      "sphere_cd": -775,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 371,
+      "sphere_cd": -275,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 372,
+      "sphere_cd": -825,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 373,
+      "sphere_cd": -150,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 374,
+      "sphere_cd": -825,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 375,
+      "sphere_cd": 575,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 376,
+      "sphere_cd": -650,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 377,
+      "sphere_cd": 500,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 378,
+      "sphere_cd": 425,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 379,
+      "sphere_cd": -975,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 380,
+      "sphere_cd": 275,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 381,
+      "sphere_cd": -775,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 382,
+      "sphere_cd": -475,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 383,
+      "sphere_cd": -100,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 384,
+      "sphere_cd": -450,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 385,
+      "sphere_cd": -875,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 386,
+      "sphere_cd": 350,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 387,
+      "sphere_cd": 175,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 388,
+      "sphere_cd": -725,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 389,
+      "sphere_cd": -50,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 390,
+      "sphere_cd": -700,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 391,
+      "sphere_cd": -500,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 392,
+      "sphere_cd": 600,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 393,
+      "sphere_cd": -325,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 394,
+      "sphere_cd": -50,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 395,
+      "sphere_cd": 450,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 396,
+      "sphere_cd": -625,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 397,
+      "sphere_cd": -400,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 398,
+      "sphere_cd": -550,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 399,
+      "sphere_cd": 425,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 400,
+      "sphere_cd": -450,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 401,
+      "sphere_cd": -925,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 402,
+      "sphere_cd": 75,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 403,
+      "sphere_cd": -150,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 404,
+      "sphere_cd": 550,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 405,
+      "sphere_cd": -350,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 406,
+      "sphere_cd": 425,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 407,
+      "sphere_cd": 525,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 408,
+      "sphere_cd": -425,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 409,
+      "sphere_cd": -575,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 410,
+      "sphere_cd": -950,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 411,
+      "sphere_cd": -875,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 412,
+      "sphere_cd": -350,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 413,
+      "sphere_cd": -975,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 414,
+      "sphere_cd": 100,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 415,
+      "sphere_cd": 25,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 416,
+      "sphere_cd": -175,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 417,
+      "sphere_cd": -125,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 418,
+      "sphere_cd": -175,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 419,
+      "sphere_cd": -325,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 420,
+      "sphere_cd": -50,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 421,
+      "sphere_cd": 25,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 422,
+      "sphere_cd": -700,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 423,
+      "sphere_cd": -1000,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 424,
+      "sphere_cd": 50,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 425,
+      "sphere_cd": -550,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 426,
+      "sphere_cd": -175,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 427,
+      "sphere_cd": -675,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 428,
+      "sphere_cd": -225,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 429,
+      "sphere_cd": 100,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 430,
+      "sphere_cd": -550,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 431,
+      "sphere_cd": 50,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 432,
+      "sphere_cd": 150,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 433,
+      "sphere_cd": -750,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 434,
+      "sphere_cd": -25,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 435,
+      "sphere_cd": -875,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 436,
+      "sphere_cd": -750,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 437,
+      "sphere_cd": -975,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 438,
+      "sphere_cd": -1000,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 439,
+      "sphere_cd": 425,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 440,
+      "sphere_cd": -100,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 441,
+      "sphere_cd": -275,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 442,
+      "sphere_cd": -475,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 443,
+      "sphere_cd": 100,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 444,
+      "sphere_cd": -75,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 445,
+      "sphere_cd": -600,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 446,
+      "sphere_cd": -525,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 447,
+      "sphere_cd": -125,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 448,
+      "sphere_cd": 75,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 449,
+      "sphere_cd": -950,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 450,
+      "sphere_cd": -50,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 451,
+      "sphere_cd": -250,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 452,
+      "sphere_cd": -275,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 453,
+      "sphere_cd": -125,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 454,
+      "sphere_cd": 425,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 455,
+      "sphere_cd": -175,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 456,
+      "sphere_cd": -650,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 457,
+      "sphere_cd": 75,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 458,
+      "sphere_cd": -25,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 459,
+      "sphere_cd": 425,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 460,
+      "sphere_cd": -475,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 461,
+      "sphere_cd": -300,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 462,
+      "sphere_cd": -250,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 463,
+      "sphere_cd": -575,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 464,
+      "sphere_cd": -275,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 465,
+      "sphere_cd": -125,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 466,
+      "sphere_cd": -50,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 467,
+      "sphere_cd": 650,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 468,
+      "sphere_cd": -225,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 469,
+      "sphere_cd": 550,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 470,
+      "sphere_cd": 275,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 471,
+      "sphere_cd": 650,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 472,
+      "sphere_cd": 25,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 473,
+      "sphere_cd": -100,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 474,
+      "sphere_cd": -125,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 475,
+      "sphere_cd": 525,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 476,
+      "sphere_cd": -750,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 477,
+      "sphere_cd": 125,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 478,
+      "sphere_cd": -750,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 479,
+      "sphere_cd": -150,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 480,
+      "sphere_cd": -625,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 481,
+      "sphere_cd": -375,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 482,
+      "sphere_cd": -325,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 483,
+      "sphere_cd": 200,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 484,
+      "sphere_cd": 650,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 485,
+      "sphere_cd": -250,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 486,
+      "sphere_cd": 400,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 487,
+      "sphere_cd": 525,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 488,
+      "sphere_cd": 125,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 489,
+      "sphere_cd": -200,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 490,
+      "sphere_cd": -400,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 491,
+      "sphere_cd": -250,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 492,
+      "sphere_cd": -550,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 493,
+      "sphere_cd": -100,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 494,
+      "sphere_cd": -475,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 495,
+      "sphere_cd": -475,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 496,
+      "sphere_cd": -450,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 497,
+      "sphere_cd": -450,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 498,
+      "sphere_cd": 75,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 499,
+      "sphere_cd": 150,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 500,
+      "sphere_cd": -200,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 501,
+      "sphere_cd": 175,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 502,
+      "sphere_cd": 325,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 503,
+      "sphere_cd": -25,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 504,
+      "sphere_cd": -950,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 505,
+      "sphere_cd": -375,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 506,
+      "sphere_cd": -50,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 507,
+      "sphere_cd": -175,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 508,
+      "sphere_cd": -750,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 509,
+      "sphere_cd": 0,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 510,
+      "sphere_cd": 225,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 511,
+      "sphere_cd": -500,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 512,
+      "sphere_cd": -500,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 513,
+      "sphere_cd": -200,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 514,
+      "sphere_cd": 175,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 515,
+      "sphere_cd": -1000,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 516,
+      "sphere_cd": -900,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 517,
+      "sphere_cd": -150,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 518,
+      "sphere_cd": -1025,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 519,
+      "sphere_cd": -250,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 520,
+      "sphere_cd": 400,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 521,
+      "sphere_cd": 375,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 522,
+      "sphere_cd": -75,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 523,
+      "sphere_cd": -525,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 524,
+      "sphere_cd": 300,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 525,
+      "sphere_cd": -850,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 526,
+      "sphere_cd": -275,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 527,
+      "sphere_cd": -850,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 528,
+      "sphere_cd": -550,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 529,
+      "sphere_cd": 550,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 530,
+      "sphere_cd": -175,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 531,
+      "sphere_cd": -375,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 532,
+      "sphere_cd": 25,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 533,
+      "sphere_cd": 25,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 534,
+      "sphere_cd": 400,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 535,
+      "sphere_cd": 450,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 536,
+      "sphere_cd": -825,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 537,
+      "sphere_cd": 575,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 538,
+      "sphere_cd": -225,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 539,
+      "sphere_cd": 125,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 540,
+      "sphere_cd": 300,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 541,
+      "sphere_cd": 375,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 542,
+      "sphere_cd": 200,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 543,
+      "sphere_cd": 125,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 544,
+      "sphere_cd": 25,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 545,
+      "sphere_cd": -725,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 546,
+      "sphere_cd": 400,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 547,
+      "sphere_cd": -475,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 548,
+      "sphere_cd": -100,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 549,
+      "sphere_cd": -75,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 550,
+      "sphere_cd": -875,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 551,
+      "sphere_cd": -300,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 552,
+      "sphere_cd": -1050,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 553,
+      "sphere_cd": 475,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 554,
+      "sphere_cd": 0,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 555,
+      "sphere_cd": -650,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 556,
+      "sphere_cd": 300,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 557,
+      "sphere_cd": 325,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 558,
+      "sphere_cd": 25,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 559,
+      "sphere_cd": -425,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 560,
+      "sphere_cd": -600,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 561,
+      "sphere_cd": -750,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 562,
+      "sphere_cd": -425,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 563,
+      "sphere_cd": -850,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 564,
+      "sphere_cd": -325,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 565,
+      "sphere_cd": 225,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 566,
+      "sphere_cd": -250,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 567,
+      "sphere_cd": -950,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 568,
+      "sphere_cd": -225,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 569,
+      "sphere_cd": -650,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 570,
+      "sphere_cd": 100,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 571,
+      "sphere_cd": 150,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 572,
+      "sphere_cd": 350,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 573,
+      "sphere_cd": 450,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 574,
+      "sphere_cd": -800,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 575,
+      "sphere_cd": 300,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 576,
+      "sphere_cd": -125,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 577,
+      "sphere_cd": -375,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 578,
+      "sphere_cd": -475,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 579,
+      "sphere_cd": -625,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 580,
+      "sphere_cd": -375,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 581,
+      "sphere_cd": -450,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 582,
+      "sphere_cd": -925,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 583,
+      "sphere_cd": -575,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 584,
+      "sphere_cd": 225,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 585,
+      "sphere_cd": -725,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 586,
+      "sphere_cd": -550,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 587,
+      "sphere_cd": -250,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 588,
+      "sphere_cd": 100,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 589,
+      "sphere_cd": 500,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 590,
+      "sphere_cd": -325,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 591,
+      "sphere_cd": -525,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 592,
+      "sphere_cd": -575,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 593,
+      "sphere_cd": -325,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 594,
+      "sphere_cd": 400,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 595,
+      "sphere_cd": 150,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 596,
+      "sphere_cd": -700,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 597,
+      "sphere_cd": 200,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 598,
+      "sphere_cd": 550,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 599,
+      "sphere_cd": -175,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 600,
+      "sphere_cd": -925,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 601,
+      "sphere_cd": 225,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 602,
+      "sphere_cd": -650,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 603,
+      "sphere_cd": -775,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 604,
+      "sphere_cd": -75,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 605,
+      "sphere_cd": -425,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 606,
+      "sphere_cd": -375,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 607,
+      "sphere_cd": -475,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 608,
+      "sphere_cd": -600,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 609,
+      "sphere_cd": 0,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 610,
+      "sphere_cd": 50,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 611,
+      "sphere_cd": -125,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 612,
+      "sphere_cd": 75,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 613,
+      "sphere_cd": -625,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 614,
+      "sphere_cd": -350,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 615,
+      "sphere_cd": -925,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 616,
+      "sphere_cd": -375,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 617,
+      "sphere_cd": 25,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 618,
+      "sphere_cd": 325,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 619,
+      "sphere_cd": 250,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 620,
+      "sphere_cd": -275,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 621,
+      "sphere_cd": -100,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 622,
+      "sphere_cd": 300,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 623,
+      "sphere_cd": -150,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 624,
+      "sphere_cd": 350,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 625,
+      "sphere_cd": -525,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 626,
+      "sphere_cd": 550,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 627,
+      "sphere_cd": -900,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 628,
+      "sphere_cd": 50,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 629,
+      "sphere_cd": -925,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 630,
+      "sphere_cd": -400,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 631,
+      "sphere_cd": 300,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 632,
+      "sphere_cd": -25,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 633,
+      "sphere_cd": -1050,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 634,
+      "sphere_cd": -525,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 635,
+      "sphere_cd": 50,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 636,
+      "sphere_cd": -325,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 637,
+      "sphere_cd": -400,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 638,
+      "sphere_cd": -425,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 639,
+      "sphere_cd": -600,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 640,
+      "sphere_cd": 350,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 641,
+      "sphere_cd": 300,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 642,
+      "sphere_cd": 25,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 643,
+      "sphere_cd": -450,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 644,
+      "sphere_cd": 450,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 645,
+      "sphere_cd": -800,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 646,
+      "sphere_cd": 50,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 647,
+      "sphere_cd": -200,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 648,
+      "sphere_cd": 175,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 649,
+      "sphere_cd": 225,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 650,
+      "sphere_cd": -225,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 651,
+      "sphere_cd": -625,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 652,
+      "sphere_cd": 200,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 653,
+      "sphere_cd": -900,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 654,
+      "sphere_cd": -675,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 655,
+      "sphere_cd": 125,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 656,
+      "sphere_cd": 0,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 657,
+      "sphere_cd": 50,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 658,
+      "sphere_cd": -500,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 659,
+      "sphere_cd": -950,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 660,
+      "sphere_cd": -725,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 661,
+      "sphere_cd": 125,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 662,
+      "sphere_cd": -875,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 663,
+      "sphere_cd": -150,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 664,
+      "sphere_cd": -225,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 665,
+      "sphere_cd": -725,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 666,
+      "sphere_cd": -325,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 667,
+      "sphere_cd": -125,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 668,
+      "sphere_cd": -600,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 669,
+      "sphere_cd": 125,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 670,
+      "sphere_cd": -325,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 671,
+      "sphere_cd": -75,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 672,
+      "sphere_cd": -400,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 673,
+      "sphere_cd": 425,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 675,
+      "sphere_cd": -125,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 676,
+      "sphere_cd": -425,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 677,
+      "sphere_cd": 75,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 678,
+      "sphere_cd": -350,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 679,
+      "sphere_cd": -775,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 680,
+      "sphere_cd": -575,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 681,
+      "sphere_cd": 150,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 682,
+      "sphere_cd": 150,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 683,
+      "sphere_cd": 625,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 684,
+      "sphere_cd": 150,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 685,
+      "sphere_cd": -200,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 686,
+      "sphere_cd": 375,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 687,
+      "sphere_cd": -550,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 688,
+      "sphere_cd": -400,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 689,
+      "sphere_cd": -950,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 690,
+      "sphere_cd": -425,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 691,
+      "sphere_cd": -275,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 692,
+      "sphere_cd": -1050,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 693,
+      "sphere_cd": 300,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 694,
+      "sphere_cd": 0,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 695,
+      "sphere_cd": 50,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 696,
+      "sphere_cd": 600,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 697,
+      "sphere_cd": 125,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 698,
+      "sphere_cd": -125,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 699,
+      "sphere_cd": -200,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 700,
+      "sphere_cd": -975,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 701,
+      "sphere_cd": -1025,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 702,
+      "sphere_cd": -50,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 703,
+      "sphere_cd": -225,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 704,
+      "sphere_cd": -275,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 705,
+      "sphere_cd": 300,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 706,
+      "sphere_cd": -425,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 707,
+      "sphere_cd": 275,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 708,
+      "sphere_cd": 175,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 709,
+      "sphere_cd": 25,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 710,
+      "sphere_cd": -450,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 711,
+      "sphere_cd": -1000,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 712,
+      "sphere_cd": 650,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 713,
+      "sphere_cd": -400,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 714,
+      "sphere_cd": 450,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 715,
+      "sphere_cd": -75,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 716,
+      "sphere_cd": 500,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 717,
+      "sphere_cd": 225,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 718,
+      "sphere_cd": -425,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 719,
+      "sphere_cd": -750,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 720,
+      "sphere_cd": -125,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 721,
+      "sphere_cd": -525,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 722,
+      "sphere_cd": -900,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 723,
+      "sphere_cd": -25,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 724,
+      "sphere_cd": 325,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 725,
+      "sphere_cd": -750,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 726,
+      "sphere_cd": 250,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 727,
+      "sphere_cd": -550,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 728,
+      "sphere_cd": -900,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 729,
+      "sphere_cd": -250,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 730,
+      "sphere_cd": -325,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 731,
+      "sphere_cd": -800,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 732,
+      "sphere_cd": -875,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 733,
+      "sphere_cd": -150,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 734,
+      "sphere_cd": -850,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 735,
+      "sphere_cd": -325,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 736,
+      "sphere_cd": -400,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 737,
+      "sphere_cd": -475,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 738,
+      "sphere_cd": 0,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 739,
+      "sphere_cd": -225,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 740,
+      "sphere_cd": -1050,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 741,
+      "sphere_cd": -200,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 742,
+      "sphere_cd": -275,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 743,
+      "sphere_cd": -350,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 744,
+      "sphere_cd": 0,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 745,
+      "sphere_cd": -100,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 746,
+      "sphere_cd": -550,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 747,
+      "sphere_cd": -350,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 748,
+      "sphere_cd": 125,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 749,
+      "sphere_cd": 425,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 750,
+      "sphere_cd": -250,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 751,
+      "sphere_cd": -700,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 752,
+      "sphere_cd": -375,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 753,
+      "sphere_cd": 250,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 754,
+      "sphere_cd": 175,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 755,
+      "sphere_cd": -300,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 756,
+      "sphere_cd": -575,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 757,
+      "sphere_cd": 175,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 758,
+      "sphere_cd": -600,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 759,
+      "sphere_cd": -825,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 760,
+      "sphere_cd": -675,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 761,
+      "sphere_cd": 150,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 762,
+      "sphere_cd": 125,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 763,
+      "sphere_cd": 625,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 764,
+      "sphere_cd": -875,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 765,
+      "sphere_cd": 375,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 766,
+      "sphere_cd": -200,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 767,
+      "sphere_cd": -100,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 768,
+      "sphere_cd": -400,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 769,
+      "sphere_cd": -650,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 770,
+      "sphere_cd": 175,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 771,
+      "sphere_cd": -300,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 772,
+      "sphere_cd": 325,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 773,
+      "sphere_cd": -825,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 774,
+      "sphere_cd": -975,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 775,
+      "sphere_cd": -550,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 776,
+      "sphere_cd": -550,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 777,
+      "sphere_cd": 600,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 778,
+      "sphere_cd": -50,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 779,
+      "sphere_cd": -825,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 780,
+      "sphere_cd": -400,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 781,
+      "sphere_cd": 250,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 782,
+      "sphere_cd": -250,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 783,
+      "sphere_cd": -800,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 784,
+      "sphere_cd": -575,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 785,
+      "sphere_cd": 450,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 786,
+      "sphere_cd": 200,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 787,
+      "sphere_cd": 275,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 788,
+      "sphere_cd": -450,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 789,
+      "sphere_cd": -100,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 790,
+      "sphere_cd": 325,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 791,
+      "sphere_cd": 50,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 792,
+      "sphere_cd": -675,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 793,
+      "sphere_cd": -625,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 794,
+      "sphere_cd": -650,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 795,
+      "sphere_cd": -100,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 796,
+      "sphere_cd": -800,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 797,
+      "sphere_cd": -425,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 798,
+      "sphere_cd": -850,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 799,
+      "sphere_cd": -50,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 800,
+      "sphere_cd": -575,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 801,
+      "sphere_cd": -650,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 802,
+      "sphere_cd": -650,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 803,
+      "sphere_cd": 275,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 804,
+      "sphere_cd": -450,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 805,
+      "sphere_cd": 350,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 806,
+      "sphere_cd": -725,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 807,
+      "sphere_cd": 100,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 808,
+      "sphere_cd": 325,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 809,
+      "sphere_cd": -125,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 810,
+      "sphere_cd": 100,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 811,
+      "sphere_cd": -350,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 812,
+      "sphere_cd": -400,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 813,
+      "sphere_cd": 425,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 814,
+      "sphere_cd": 200,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 815,
+      "sphere_cd": 450,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 816,
+      "sphere_cd": 575,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 817,
+      "sphere_cd": 75,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 818,
+      "sphere_cd": 575,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 819,
+      "sphere_cd": 550,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 820,
+      "sphere_cd": -50,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 821,
+      "sphere_cd": -300,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 822,
+      "sphere_cd": 650,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 823,
+      "sphere_cd": -500,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 824,
+      "sphere_cd": -250,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 825,
+      "sphere_cd": -300,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 826,
+      "sphere_cd": -775,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 827,
+      "sphere_cd": 500,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 828,
+      "sphere_cd": -625,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 829,
+      "sphere_cd": -175,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 830,
+      "sphere_cd": -750,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 831,
+      "sphere_cd": -775,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 832,
+      "sphere_cd": -525,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 833,
+      "sphere_cd": -325,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 834,
+      "sphere_cd": -775,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 835,
+      "sphere_cd": 400,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 836,
+      "sphere_cd": -1025,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 837,
+      "sphere_cd": -725,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 838,
+      "sphere_cd": -375,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 839,
+      "sphere_cd": 375,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 840,
+      "sphere_cd": 100,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 841,
+      "sphere_cd": -1000,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 842,
+      "sphere_cd": -150,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 843,
+      "sphere_cd": -825,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 844,
+      "sphere_cd": -25,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 845,
+      "sphere_cd": -350,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 846,
+      "sphere_cd": -675,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 847,
+      "sphere_cd": -50,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 848,
+      "sphere_cd": -375,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 849,
+      "sphere_cd": 0,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 850,
+      "sphere_cd": -525,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 851,
+      "sphere_cd": -300,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 852,
+      "sphere_cd": 350,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 853,
+      "sphere_cd": 375,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 854,
+      "sphere_cd": -700,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 855,
+      "sphere_cd": 225,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 856,
+      "sphere_cd": 350,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 857,
+      "sphere_cd": 550,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 858,
+      "sphere_cd": -300,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 859,
+      "sphere_cd": 375,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 860,
+      "sphere_cd": -100,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 861,
+      "sphere_cd": -150,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 862,
+      "sphere_cd": -100,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 863,
+      "sphere_cd": 600,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 864,
+      "sphere_cd": -525,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 865,
+      "sphere_cd": 100,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 866,
+      "sphere_cd": -175,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 867,
+      "sphere_cd": 400,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 868,
+      "sphere_cd": -500,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 869,
+      "sphere_cd": 75,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 870,
+      "sphere_cd": -500,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 871,
+      "sphere_cd": 500,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 872,
+      "sphere_cd": 300,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 873,
+      "sphere_cd": 50,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 874,
+      "sphere_cd": 150,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 875,
+      "sphere_cd": 400,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 876,
+      "sphere_cd": 525,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 877,
+      "sphere_cd": 275,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 878,
+      "sphere_cd": 225,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 879,
+      "sphere_cd": -800,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 880,
+      "sphere_cd": -75,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 881,
+      "sphere_cd": 50,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 882,
+      "sphere_cd": 625,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 883,
+      "sphere_cd": -75,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 884,
+      "sphere_cd": -950,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 885,
+      "sphere_cd": -200,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 886,
+      "sphere_cd": -400,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 887,
+      "sphere_cd": 575,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 888,
+      "sphere_cd": -325,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 889,
+      "sphere_cd": 50,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 890,
+      "sphere_cd": 500,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 891,
+      "sphere_cd": -775,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 892,
+      "sphere_cd": -675,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 893,
+      "sphere_cd": 550,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 894,
+      "sphere_cd": -500,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 895,
+      "sphere_cd": -325,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 896,
+      "sphere_cd": 500,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 897,
+      "sphere_cd": 225,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 898,
+      "sphere_cd": -125,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 899,
+      "sphere_cd": 325,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 900,
+      "sphere_cd": -600,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 901,
+      "sphere_cd": -750,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 902,
+      "sphere_cd": 250,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 903,
+      "sphere_cd": 100,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 904,
+      "sphere_cd": -225,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 905,
+      "sphere_cd": -850,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 906,
+      "sphere_cd": -225,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 907,
+      "sphere_cd": -300,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 908,
+      "sphere_cd": -425,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 909,
+      "sphere_cd": -75,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 910,
+      "sphere_cd": -750,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 911,
+      "sphere_cd": -75,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 912,
+      "sphere_cd": -600,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 913,
+      "sphere_cd": -875,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 914,
+      "sphere_cd": -75,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 915,
+      "sphere_cd": -400,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 916,
+      "sphere_cd": -25,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 917,
+      "sphere_cd": -375,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 918,
+      "sphere_cd": -75,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 919,
+      "sphere_cd": 275,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 920,
+      "sphere_cd": 25,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 921,
+      "sphere_cd": 325,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 922,
+      "sphere_cd": -900,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 923,
+      "sphere_cd": -275,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 924,
+      "sphere_cd": -275,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 925,
+      "sphere_cd": -225,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 926,
+      "sphere_cd": 475,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 927,
+      "sphere_cd": -925,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 928,
+      "sphere_cd": -625,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 929,
+      "sphere_cd": 325,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 930,
+      "sphere_cd": 225,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 931,
+      "sphere_cd": -450,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 932,
+      "sphere_cd": -100,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 933,
+      "sphere_cd": 100,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 934,
+      "sphere_cd": -150,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 935,
+      "sphere_cd": -725,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 936,
+      "sphere_cd": -500,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 937,
+      "sphere_cd": 125,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 938,
+      "sphere_cd": -1000,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 939,
+      "sphere_cd": -225,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 940,
+      "sphere_cd": 175,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 941,
+      "sphere_cd": -250,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 942,
+      "sphere_cd": -75,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 943,
+      "sphere_cd": -475,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 944,
+      "sphere_cd": 275,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 945,
+      "sphere_cd": -300,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 946,
+      "sphere_cd": 100,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 947,
+      "sphere_cd": -25,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 948,
+      "sphere_cd": -800,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 949,
+      "sphere_cd": -25,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 950,
+      "sphere_cd": 275,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 951,
+      "sphere_cd": -1050,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 952,
+      "sphere_cd": 575,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 953,
+      "sphere_cd": -350,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 954,
+      "sphere_cd": -825,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 955,
+      "sphere_cd": -700,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 956,
+      "sphere_cd": -50,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 957,
+      "sphere_cd": 100,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 958,
+      "sphere_cd": -925,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 959,
+      "sphere_cd": 150,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 960,
+      "sphere_cd": 75,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 961,
+      "sphere_cd": -100,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 962,
+      "sphere_cd": -325,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 963,
+      "sphere_cd": -725,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 964,
+      "sphere_cd": 300,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 965,
+      "sphere_cd": 75,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 966,
+      "sphere_cd": -425,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 967,
+      "sphere_cd": 325,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 968,
+      "sphere_cd": 600,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 969,
+      "sphere_cd": -500,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 970,
+      "sphere_cd": 150,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 971,
+      "sphere_cd": -25,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 972,
+      "sphere_cd": 175,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 973,
+      "sphere_cd": -100,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 974,
+      "sphere_cd": -600,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 975,
+      "sphere_cd": -475,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 976,
+      "sphere_cd": -1100,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 977,
+      "sphere_cd": -1100,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 978,
+      "sphere_cd": -1100,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 979,
+      "sphere_cd": -1100,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 980,
+      "sphere_cd": -1100,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 981,
+      "sphere_cd": -1100,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 982,
+      "sphere_cd": -1100,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 983,
+      "sphere_cd": -1075,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 984,
+      "sphere_cd": -1075,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 985,
+      "sphere_cd": -1075,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 986,
+      "sphere_cd": -1075,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 987,
+      "sphere_cd": -1075,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 988,
+      "sphere_cd": -1075,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 989,
+      "sphere_cd": -1075,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 990,
+      "sphere_cd": -1050,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 991,
+      "sphere_cd": -1025,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 992,
+      "sphere_cd": -975,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 993,
+      "sphere_cd": -950,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 994,
+      "sphere_cd": -925,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 995,
+      "sphere_cd": -900,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 996,
+      "sphere_cd": -875,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 997,
+      "sphere_cd": -850,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 998,
+      "sphere_cd": -800,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 999,
+      "sphere_cd": -775,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 1000,
+      "sphere_cd": -750,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 1001,
+      "sphere_cd": -725,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 1002,
+      "sphere_cd": -700,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 1003,
+      "sphere_cd": -675,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 1004,
+      "sphere_cd": -650,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 1005,
+      "sphere_cd": -600,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1006,
+      "sphere_cd": -575,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1007,
+      "sphere_cd": -575,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 1008,
+      "sphere_cd": -550,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 1009,
+      "sphere_cd": -525,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 1010,
+      "sphere_cd": -525,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 1011,
+      "sphere_cd": -500,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 1012,
+      "sphere_cd": -475,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 1013,
+      "sphere_cd": -450,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1014,
+      "sphere_cd": -425,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1015,
+      "sphere_cd": -400,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1016,
+      "sphere_cd": -375,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1017,
+      "sphere_cd": -350,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1018,
+      "sphere_cd": -325,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1019,
+      "sphere_cd": 675,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 1020,
+      "sphere_cd": 675,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 1021,
+      "sphere_cd": 675,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 1022,
+      "sphere_cd": 675,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 1024,
+      "sphere_cd": 675,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 1025,
+      "sphere_cd": 675,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 1026,
+      "sphere_cd": 675,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 1027,
+      "sphere_cd": -625,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1028,
+      "sphere_cd": -1100,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 1029,
+      "sphere_cd": -1075,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 1030,
+      "sphere_cd": -1050,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 1031,
+      "sphere_cd": -1025,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 1032,
+      "sphere_cd": -1000,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 1033,
+      "sphere_cd": -975,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 1034,
+      "sphere_cd": -950,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 1035,
+      "sphere_cd": -925,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 1036,
+      "sphere_cd": -900,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 1037,
+      "sphere_cd": -875,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 1038,
+      "sphere_cd": -850,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 1039,
+      "sphere_cd": -825,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 1040,
+      "sphere_cd": -800,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 1041,
+      "sphere_cd": -775,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 1042,
+      "sphere_cd": -750,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 1043,
+      "sphere_cd": -725,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 1044,
+      "sphere_cd": -700,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1045,
+      "sphere_cd": -675,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1046,
+      "sphere_cd": -650,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1047,
+      "sphere_cd": -625,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 1048,
+      "sphere_cd": -600,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 1049,
+      "sphere_cd": -575,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 1050,
+      "sphere_cd": -550,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 1051,
+      "sphere_cd": -525,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1052,
+      "sphere_cd": -500,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1053,
+      "sphere_cd": -475,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1054,
+      "sphere_cd": -450,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1055,
+      "sphere_cd": -425,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1056,
+      "sphere_cd": -400,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1057,
+      "sphere_cd": -375,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1058,
+      "sphere_cd": -350,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1059,
+      "sphere_cd": -325,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1060,
+      "sphere_cd": -300,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1061,
+      "sphere_cd": -275,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1062,
+      "sphere_cd": -250,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1063,
+      "sphere_cd": -225,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1064,
+      "sphere_cd": -200,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1065,
+      "sphere_cd": -175,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1066,
+      "sphere_cd": -150,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1067,
+      "sphere_cd": -125,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1068,
+      "sphere_cd": -100,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1069,
+      "sphere_cd": -75,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1070,
+      "sphere_cd": -50,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1071,
+      "sphere_cd": -25,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1072,
+      "sphere_cd": 0,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1073,
+      "sphere_cd": 25,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1074,
+      "sphere_cd": 50,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1075,
+      "sphere_cd": 75,
+      "cylinder_cd": -475
+    },
+    {
+      "id": 1076,
+      "sphere_cd": 100,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1077,
+      "sphere_cd": 125,
+      "cylinder_cd": -450
+    },
+    {
+      "id": 1078,
+      "sphere_cd": 150,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1079,
+      "sphere_cd": 175,
+      "cylinder_cd": -425
+    },
+    {
+      "id": 1080,
+      "sphere_cd": 200,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 1081,
+      "sphere_cd": 225,
+      "cylinder_cd": -400
+    },
+    {
+      "id": 1082,
+      "sphere_cd": 250,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 1083,
+      "sphere_cd": 275,
+      "cylinder_cd": -375
+    },
+    {
+      "id": 1084,
+      "sphere_cd": 300,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1085,
+      "sphere_cd": 325,
+      "cylinder_cd": -350
+    },
+    {
+      "id": 1086,
+      "sphere_cd": 350,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 1087,
+      "sphere_cd": 375,
+      "cylinder_cd": -325
+    },
+    {
+      "id": 1088,
+      "sphere_cd": 400,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 1089,
+      "sphere_cd": 425,
+      "cylinder_cd": -300
+    },
+    {
+      "id": 1090,
+      "sphere_cd": 450,
+      "cylinder_cd": -275
+    },
+    {
+      "id": 1091,
+      "sphere_cd": 475,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 1092,
+      "sphere_cd": 500,
+      "cylinder_cd": -250
+    },
+    {
+      "id": 1093,
+      "sphere_cd": 525,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 1094,
+      "sphere_cd": 550,
+      "cylinder_cd": -225
+    },
+    {
+      "id": 1095,
+      "sphere_cd": 575,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 1096,
+      "sphere_cd": 600,
+      "cylinder_cd": -200
+    },
+    {
+      "id": 1097,
+      "sphere_cd": 625,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 1098,
+      "sphere_cd": 650,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 1099,
+      "sphere_cd": 675,
+      "cylinder_cd": -175
+    },
+    {
+      "id": 1100,
+      "sphere_cd": 700,
+      "cylinder_cd": 0
+    },
+    {
+      "id": 1101,
+      "sphere_cd": 700,
+      "cylinder_cd": -25
+    },
+    {
+      "id": 1102,
+      "sphere_cd": 700,
+      "cylinder_cd": -50
+    },
+    {
+      "id": 1103,
+      "sphere_cd": 700,
+      "cylinder_cd": -75
+    },
+    {
+      "id": 1104,
+      "sphere_cd": 700,
+      "cylinder_cd": -100
+    },
+    {
+      "id": 1105,
+      "sphere_cd": 700,
+      "cylinder_cd": -125
+    },
+    {
+      "id": 1106,
+      "sphere_cd": 700,
+      "cylinder_cd": -150
+    },
+    {
+      "id": 1107,
+      "sphere_cd": 700,
+      "cylinder_cd": -175
+    }
+  ],
+  "axis": [
+    {
+      "id": 1,
+      "degrees": 92
+    },
+    {
+      "id": 2,
+      "degrees": 48
+    },
+    {
+      "id": 3,
+      "degrees": 172
+    },
+    {
+      "id": 4,
+      "degrees": 124
+    },
+    {
+      "id": 5,
+      "degrees": 20
+    },
+    {
+      "id": 6,
+      "degrees": 4
+    },
+    {
+      "id": 7,
+      "degrees": 0
+    },
+    {
+      "id": 8,
+      "degrees": 96
+    },
+    {
+      "id": 9,
+      "degrees": 84
+    },
+    {
+      "id": 10,
+      "degrees": 8
+    },
+    {
+      "id": 11,
+      "degrees": 88
+    },
+    {
+      "id": 12,
+      "degrees": 28
+    },
+    {
+      "id": 13,
+      "degrees": 104
+    },
+    {
+      "id": 14,
+      "degrees": 40
+    },
+    {
+      "id": 15,
+      "degrees": 156
+    },
+    {
+      "id": 16,
+      "degrees": 148
+    },
+    {
+      "id": 17,
+      "degrees": 80
+    },
+    {
+      "id": 18,
+      "degrees": 100
+    },
+    {
+      "id": 19,
+      "degrees": 164
+    },
+    {
+      "id": 20,
+      "degrees": 12
+    },
+    {
+      "id": 21,
+      "degrees": 108
+    },
+    {
+      "id": 22,
+      "degrees": 16
+    },
+    {
+      "id": 23,
+      "degrees": 36
+    },
+    {
+      "id": 24,
+      "degrees": 32
+    },
+    {
+      "id": 25,
+      "degrees": 128
+    },
+    {
+      "id": 26,
+      "degrees": 140
+    },
+    {
+      "id": 27,
+      "degrees": 64
+    },
+    {
+      "id": 28,
+      "degrees": 68
+    },
+    {
+      "id": 29,
+      "degrees": 160
+    },
+    {
+      "id": 30,
+      "degrees": 76
+    },
+    {
+      "id": 31,
+      "degrees": 72
+    },
+    {
+      "id": 32,
+      "degrees": 152
+    },
+    {
+      "id": 33,
+      "degrees": 44
+    },
+    {
+      "id": 34,
+      "degrees": 176
+    },
+    {
+      "id": 35,
+      "degrees": 60
+    },
+    {
+      "id": 36,
+      "degrees": 144
+    },
+    {
+      "id": 37,
+      "degrees": 120
+    },
+    {
+      "id": 38,
+      "degrees": 52
+    },
+    {
+      "id": 39,
+      "degrees": 168
+    },
+    {
+      "id": 40,
+      "degrees": 116
+    },
+    {
+      "id": 41,
+      "degrees": 132
+    },
+    {
+      "id": 42,
+      "degrees": 112
+    },
+    {
+      "id": 43,
+      "degrees": 24
+    },
+    {
+      "id": 44,
+      "degrees": 56
+    },
+    {
+      "id": 45,
+      "degrees": 136
+    }
+  ],
+  "calibration_limits": [
+    {
+      "cylinder_centidiopters": -450,
+      "min_sphere_centidiopters": -300,
+      "max_sphere_centidiopters": 75
+    },
+    {
+      "cylinder_centidiopters": -425,
+      "min_sphere_centidiopters": -375,
+      "max_sphere_centidiopters": 125
+    },
+    {
+      "cylinder_centidiopters": -400,
+      "min_sphere_centidiopters": -450,
+      "max_sphere_centidiopters": 175
+    },
+    {
+      "cylinder_centidiopters": -375,
+      "min_sphere_centidiopters": -500,
+      "max_sphere_centidiopters": 225
+    },
+    {
+      "cylinder_centidiopters": -350,
+      "min_sphere_centidiopters": -550,
+      "max_sphere_centidiopters": 275
+    },
+    {
+      "cylinder_centidiopters": -325,
+      "min_sphere_centidiopters": -625,
+      "max_sphere_centidiopters": 325
+    },
+    {
+      "cylinder_centidiopters": -300,
+      "min_sphere_centidiopters": -700,
+      "max_sphere_centidiopters": 375
+    },
+    {
+      "cylinder_centidiopters": -275,
+      "min_sphere_centidiopters": -750,
+      "max_sphere_centidiopters": 425
+    },
+    {
+      "cylinder_centidiopters": -250,
+      "min_sphere_centidiopters": -825,
+      "max_sphere_centidiopters": 450
+    },
+    {
+      "cylinder_centidiopters": -225,
+      "min_sphere_centidiopters": -875,
+      "max_sphere_centidiopters": 500
+    },
+    {
+      "cylinder_centidiopters": -200,
+      "min_sphere_centidiopters": -925,
+      "max_sphere_centidiopters": 550
+    },
+    {
+      "cylinder_centidiopters": -175,
+      "min_sphere_centidiopters": -1000,
+      "max_sphere_centidiopters": 600
+    },
+    {
+      "cylinder_centidiopters": -150,
+      "min_sphere_centidiopters": -1050,
+      "max_sphere_centidiopters": 650
+    },
+    {
+      "cylinder_centidiopters": -125,
+      "min_sphere_centidiopters": -1050,
+      "max_sphere_centidiopters": 650
+    },
+    {
+      "cylinder_centidiopters": -100,
+      "min_sphere_centidiopters": -1050,
+      "max_sphere_centidiopters": 650
+    },
+    {
+      "cylinder_centidiopters": -75,
+      "min_sphere_centidiopters": -1050,
+      "max_sphere_centidiopters": 650
+    },
+    {
+      "cylinder_centidiopters": -50,
+      "min_sphere_centidiopters": -1050,
+      "max_sphere_centidiopters": 650
+    },
+    {
+      "cylinder_centidiopters": -25,
+      "min_sphere_centidiopters": -1050,
+      "max_sphere_centidiopters": 650
+    },
+    {
+      "cylinder_centidiopters": 0,
+      "min_sphere_centidiopters": -1050,
+      "max_sphere_centidiopters": 650
+    }
+  ]
+}

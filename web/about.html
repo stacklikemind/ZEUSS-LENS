@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f4f5f0">
+  <meta name="description" content="How zeuss-lens generates circular symbols locally, and the purpose and behavior of this independent interoperability experiment.">
+  <title>Purpose &amp; how it works — zeuss-lens</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <div class="page-shell about-shell">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="zeuss-lens home"><span class="brand-mark" aria-hidden="true"><i></i></span>zeuss-lens<span class="brand-divider"></span><span class="brand-subtitle">FORMAT STUDIO</span></a>
+      <a class="back-link" href="./">Open generator <span aria-hidden="true">↗</span></a>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">PURPOSE · PROCESS · IMPLEMENTATION</p>
+          <h1 id="page-title">An inspectable interoperability experiment.</h1>
+          <p class="intro-copy">Created to explore compatibility with third-party optical inserts and lenses for Apple Vision Pro. Enter supported optical values, see how they are represented, and export a circular code.</p>
+        </div>
+      </section>
+
+      <article class="panel about-content">
+        <section aria-labelledby="generation-title">
+          <p class="eyebrow">01 / GENERATION</p>
+          <h2 id="generation-title">From lens values to five rings</h2>
+          <ol class="generation-steps">
+            <li><h3>Validate the optics</h3><p>Sphere and cylinder must match a finite table in 0.25 D steps. Positive-cylinder input is transposed into the table’s non-positive notation. Canonical axes use a 4° grid; rounding is reported, or rejected in exact mode. Unsupported optical pairs are rejected.</p></li>
+            <li><h3>Build a 128-bit payload</h3><p>Version 5 records both eyes, axis identifiers, explicit VR adds, lens type, and an 80-bit synthetic identity. Web Crypto creates fresh identity bytes. These bytes vary the symbol; they do not create manufacturer records.</p></li>
+            <li><h3>Protect and place the bits</h3><p>A reversible transformation produces 138 message bits. Separate gap and color blocks receive polynomial checksums and Reed–Solomon parity. Fixed position tables place the gap block and metadata into 128 slots across five rings.</p></li>
+            <li><h3>Order the arcs</h3><p>Gap bits join slots into visible components. The encoder chooses an inversion with enough components, then uses fixed priority and neighbor tables to order 66 components for color data. Remaining components repeat gap information in the specified wrap-aware order.</p></li>
+            <li><h3>Validate and export</h3><p>The engine checks the payload round trip, checksums, parity, and redundant colors, then renders an SVG. PNG and JSON exports are also available. If a topology fails, random mode tries up to 64 identities while keeping the optics unchanged.</p></li>
+          </ol>
+          <p>Calibration adjustments are shown separately from the encoded inputs. They can include transformations and clamping; missing calibration limits are reported as unavailable. These values do not establish factory calibration.</p>
+        </section>
+
+        <section aria-labelledby="privacy-title">
+          <p class="eyebrow">02 / LOCAL PROCESSING</p>
+          <h2 id="privacy-title">Generation stays in your browser</h2>
+          <p>The static page loads a Rust engine compiled to WebAssembly. There is no server-side generation, analytics, or external service call. Optical values and synthetic identities are not uploaded or saved to browser storage. Downloaded files contain the output you choose to export; the JSON report includes the request and identity.</p>
+        </section>
+
+        <section aria-labelledby="implementation-title">
+          <p class="eyebrow">03 / IMPLEMENTATION</p>
+          <h2 id="implementation-title">A standalone Rust encoder</h2>
+          <p>The browser runs the encoder as WebAssembly. The GPUI desktop application uses the same Rust library directly. Numeric format tables are embedded at build time; generation needs no manufacturer service.</p>
+        </section>
+
+        <section aria-labelledby="scope-title">
+          <p class="eyebrow">04 / SCOPE</p>
+          <h2 id="scope-title">What the checks establish</h2>
+          <p>The checks verify in-memory symbol bits. Development also included synthetic test cases and separate raster comparisons. These results do not establish camera recognition, headset enrollment, authenticity, factory records, or clinical suitability. The tool has no camera scanner.</p>
+          <p>This independent project is not affiliated with or endorsed by Apple or a lens manufacturer.</p>
+          <nav class="reference-links" aria-label="Project references">
+            <a href="https://github.com/stacklikemind/zeuss-lens/blob/main/docs/CODE_GENERATION.md">Read the full generation walkthrough <span aria-hidden="true">↗</span></a>
+            <a href="https://www.buymeacoffee.com/stacklikemind" target="_blank" rel="noopener noreferrer"><img src="buy-me-a-coffee.png" alt="Buy Me a Coffee" width="217" height="60" style="height:60px;width:217px;"></a>
+              <a href="https://github.com/stacklikemind/zeuss-lens">Source, specifications &amp; test records <span aria-hidden="true">↗</span></a>
+          </nav>
+        </section>
+      </article>
+      <footer><p><a href="./">Return to the generator</a></p><span>INDEPENDENT · LOCAL · EXPERIMENTAL</span></footer>
+    </main>
+  </div>
+</body>
+</html>

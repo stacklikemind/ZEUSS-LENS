@@ -1,0 +1,34 @@
+name: Test and build WebAssembly
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+      - name: Install stable Rust and the WASM target
+        run: |
+          rustup toolchain install stable --profile minimal --component rustfmt --target wasm32-unknown-unknown
+          rustup default stable
+      - name: Test Rust
+        run: cargo test --locked
+      - name: Build WASM
+        run: ./scripts/build.sh
+      - name: Test the browser adapter and built WASM
+        run: node scripts/test-browser.mjs
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: cloudflare-pages-assets
+          path: web/
+          if-no-files-found: error

@@ -1,0 +1,10 @@
+{
+  "scope": "Synthetic symbol, raster, and prescription comparisons. Development validation only.",
+  "symbol_cases": 64,
+  "raster_cases": 24,
+  "prescription_cases": 64,
+  "expected_topology_errors": 0,
+  "failures": [],
+  "elapsed_seconds": 24.06,
+  "status": "passed"
+}

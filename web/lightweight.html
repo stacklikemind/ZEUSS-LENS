@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f4f5f0">
+  <title>ZEUSS LENS — Local format studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="ZEUSS LENS home"><span class="brand-mark" aria-hidden="true"><i></i></span>ZEUSS LENS<span class="brand-divider"></span><span class="brand-subtitle">FORMAT STUDIO</span></a>
+      <span id="engine-status" class="engine-status"><span class="status-dot"></span>Loading local engine</span>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="eyebrow">INDEPENDENT · LOCAL · EXPERIMENTAL</p><h1 id="page-title">From optics to a circular code.</h1><p class="intro-copy">Enter optical values, inspect what is encoded, and export a precise symbol. Everything is generated in this browser.</p></div>
+        <div class="edition">BROWSER LOCAL<span>PRIVATE BY DESIGN</span></div>
+      </section>
+      <div class="workspace">
+        <section class="panel input-panel" aria-labelledby="input-title">
+          <div class="panel-heading"><div><p class="eyebrow">01 / INPUT</p><h2 id="input-title">Lens values</h2></div><span class="unit-tag">DIOPTERS / DEGREES</span></div>
+          <form id="generate-form" autocomplete="off">
+            <div class="eyes">
+              <fieldset class="eye-card" id="right-eye">
+                <legend class="sr-only">Right eye, OD</legend>
+                <div class="eye-heading"><div><span class="eye-letter">R</span><strong>Right eye <span>OD</span></strong></div><label class="present-toggle"><input type="checkbox" name="right_present" checked><span>Present</span></label></div>
+                <div class="eye-fields">
+                  <label>Sphere <span class="field-unit">D</span><input name="right_sphere" type="number" inputmode="decimal" step="0.25" value="0" required aria-describedby="optics-help right-sphere-range"><small class="range-hint" id="right-sphere-range">Loading supported code-table limits…</small></label>
+                  <label>Cylinder <span class="field-unit">D</span><input name="right_cylinder" type="number" inputmode="decimal" step="0.25" value="0" required aria-describedby="optics-help right-cylinder-range"><small class="range-hint" id="right-cylinder-range">Loading supported code-table limits…</small></label>
+                  <label>Axis <span class="field-unit">°</span><input name="right_axis" type="number" inputmode="numeric" min="0" max="180" step="1" value="0" required></label>
+                </div>
+                <label class="add-row"><span>Explicit VR add <small>No add is assumed.</small></span><select name="right_offset" aria-label="Right eye explicit VR add"><option value="0">0.00 D · none</option><option value="1">+0.25 D</option><option value="2">+0.50 D</option><option value="3">+0.75 D</option></select></label>
+              </fieldset>
+              <fieldset class="eye-card" id="left-eye">
+                <legend class="sr-only">Left eye, OS</legend>
+                <div class="eye-heading"><div><span class="eye-letter">L</span><strong>Left eye <span>OS</span></strong></div><label class="present-toggle"><input type="checkbox" name="left_present" checked><span>Present</span></label></div>
+                <div class="eye-fields">
+                  <label>Sphere <span class="field-unit">D</span><input name="left_sphere" type="number" inputmode="decimal" step="0.25" value="0" required aria-describedby="optics-help left-sphere-range"><small class="range-hint" id="left-sphere-range">Loading supported code-table limits…</small></label>
+                  <label>Cylinder <span class="field-unit">D</span><input name="left_cylinder" type="number" inputmode="decimal" step="0.25" value="0" required aria-describedby="optics-help left-cylinder-range"><small class="range-hint" id="left-cylinder-range">Loading supported code-table limits…</small></label>
+                  <label>Axis <span class="field-unit">°</span><input name="left_axis" type="number" inputmode="numeric" min="0" max="180" step="1" value="0" required></label>
+                </div>
+                <label class="add-row"><span>Explicit VR add <small>No add is assumed.</small></span><select name="left_offset" aria-label="Left eye explicit VR add"><option value="0">0.00 D · none</option><option value="1">+0.25 D</option><option value="2">+0.50 D</option><option value="3">+0.75 D</option></select></label>
+              </fieldset>
+            </div>
+            <p class="field-help" id="optics-help">Sphere and cylinder use 0.25 D steps. Only pairs in this encoder’s code table can be generated; values are never approximated. This table does not determine Apple Vision Pro or ZEISS prescription eligibility. <a href="https://www.zeiss.com/vision-care/us/zeiss-optical-inserts/prescription-guide.html" target="_blank" rel="noopener noreferrer">Check the ZEISS prescription guide</a> for lens eligibility.</p>
+            <label class="policy-row" for="axis-policy"><span>Axis policy<small id="axis-help">Native uses the format’s 4° axis grid and reports rounding.</small></span><select name="axis_policy" id="axis-policy" aria-describedby="axis-help"><option value="native">Native · allow rounding</option><option value="exact">Exact · reject rounding</option></select></label>
+            <details class="advanced"><summary>Advanced settings<span aria-hidden="true">+</span></summary><div class="advanced-body">
+              <label class="select-field">Lens type<select name="lens_type"><option value="3">Personal · 3</option><option value="1">Reader · 1</option><option value="2">Developer · 2</option></select></label>
+              <label class="check-row"><input name="fixed_identity" type="checkbox"><span>Use a fixed synthetic identity<small>For reproducible tests. A fixed identity is never changed or retried.</small></span></label>
+              <label class="identity-field">80-bit identity <span class="field-unit">20 HEX CHARACTERS</span><input name="secret_hex" type="text" inputmode="text" autocomplete="off" spellcheck="false" maxlength="20" pattern="[0-9a-fA-F]{20}" placeholder="00010203040506070809" disabled></label>
+              <p class="field-help">By default, Web Crypto creates a fresh 10-byte identity for every generation. This does not provision factory records.</p>
+            </div></details>
+            <div id="form-error" class="message error-message" role="alert" hidden></div>
+            <button class="generate-button" id="generate-button" type="submit" disabled><span>Generate code</span><span aria-hidden="true">↗</span></button>
+            <p class="local-note"><span aria-hidden="true">◇</span> Local generation · no uploads · no saved inputs</p>
+          </form>
+        </section>
+        <section class="panel preview-panel" aria-labelledby="preview-title">
+          <div class="panel-heading"><div><p class="eyebrow">02 / OUTPUT</p><h2 id="preview-title">Symbol preview</h2></div><span id="preview-badge" class="preview-badge">Awaiting engine</span></div>
+          <div class="preview-stage"><div class="preview-corner top-left"></div><div class="preview-corner top-right"></div><div class="preview-corner bottom-left"></div><div class="preview-corner bottom-right"></div><img id="symbol-image" alt="Generated circular optical code" hidden><div id="preview-placeholder" class="preview-placeholder"><span class="empty-symbol" aria-hidden="true"></span><p>Your symbol appears here</p><small>Default values are a zero-power synthetic example.</small></div></div>
+          <div class="preview-caption"><span id="symbol-caption">880 × 880 vector geometry</span><span id="attempt-caption">Fresh synthetic identity</span></div>
+          <div class="download-buttons"><button type="button" id="download-svg" disabled>Download SVG <span>↙</span></button><button type="button" id="download-png" disabled>Download PNG <span>↙</span></button><button type="button" id="download-json" disabled aria-label="Download full JSON report">JSON <span>↙</span></button></div>
+          <div class="hardware-note"><span class="notice-icon" aria-hidden="true">i</span><p><strong>Experimental, synthetic identity.</strong> Headset enrollment and camera detection are unverified. No authenticity or factory calibration is established.</p></div>
+        </section>
+      </div>
+      <section class="panel report-panel" aria-labelledby="report-title">
+        <div class="panel-heading"><div><p class="eyebrow">03 / INSPECT</p><h2 id="report-title">Encoded values &amp; checks</h2></div><span id="report-status" class="report-status">Generate to inspect</span></div>
+        <div id="report-placeholder" class="report-placeholder">Entered values, encoded values, and calibration adjustments will appear here.</div>
+        <div id="report-content" hidden>
+          <div id="warnings" class="warnings" aria-live="polite"></div>
+          <div class="comparison-scroll"><table class="comparison-table"><caption class="sr-only">Comparison of entered and encoded optical values</caption><thead><tr><th scope="col">Eye</th><th scope="col">Values</th><th scope="col">Sphere</th><th scope="col">Cylinder</th><th scope="col">Axis</th><th scope="col">VR add</th></tr></thead><tbody id="comparison-body"></tbody></table></div>
+          <div class="report-bottom"><div class="calibration-block"><p class="mini-heading">CALIBRATION VALUES</p><div id="calibration-values"></div><p class="fine-print">A separate downstream transformation; adjustments are not equivalent prescriptions or clinical recommendations.</p></div><div class="validation-block"><p class="mini-heading">IN-MEMORY VALIDATION</p><div id="validation-summary"></div><p class="fine-print">These checks inspect symbol bits. They do not test a raster image, native software, a camera, or a headset.</p></div></div>
+          <details class="technical-details"><summary>Payload &amp; full report<span aria-hidden="true">+</span></summary><div class="payload-line"><span>PAYLOAD HEX</span><code id="payload-hex"></code><button type="button" id="copy-payload">Copy</button></div><pre id="json-report" tabindex="0" aria-label="Full JSON generation report"></pre></details>
+        </div>
+      </section>
+      <footer><p>Independent implementation from an interoperability specification. <a href="about.html">Purpose &amp; how it works</a> · <a href="gpui/">GPUI app</a> · <a href="https://www.buymeacoffee.com/stacklikemind" target="_blank" rel="noopener noreferrer"><img src="buy-me-a-coffee.png" alt="Buy Me a Coffee" width="217" height="60" style="height:60px;width:217px;"></a></p><span>YOUR VALUES STAY IN THIS BROWSER</span></footer>
+      <p class="sr-only" id="live-status" role="status" aria-live="polite"></p>
+    </main>
+  </div>
+</body>
+</html>

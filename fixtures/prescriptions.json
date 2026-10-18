@@ -1,0 +1,442 @@
+{
+  "description": "Synthetic optical input fixtures. Compare payload/optical values, not English messages.",
+  "vectors": [
+    {
+      "request": {
+        "op": "generate",
+        "secret_hex": "00010203040506070809",
+        "left": {
+          "sphere": 0,
+          "cylinder": 0,
+          "axis": 0
+        },
+        "right": {
+          "sphere": 0,
+          "cylinder": 0,
+          "axis": 180
+        }
+      },
+      "ok": true,
+      "payload_hex": "50356c3ab61c00010203040506070809",
+      "fields": {
+        "version": 5,
+        "lens_type": 3,
+        "random_bits": 0,
+        "left_rx_id": 694,
+        "left_axis_id": 7,
+        "left_cylinder_sign_flipped": 0,
+        "left_rx_offset_id": 0,
+        "right_rx_id": 694,
+        "right_axis_id": 7,
+        "right_cylinder_sign_flipped": 0,
+        "right_rx_offset_id": 0,
+        "secret_hex": "00010203040506070809"
+      },
+      "entered": {
+        "left": {
+          "sphere": 0.0,
+          "cylinder": 0.0,
+          "axis": 0,
+          "rx_offset_id": 0
+        },
+        "right": {
+          "sphere": 0.0,
+          "cylinder": 0.0,
+          "axis": 180,
+          "rx_offset_id": 0
+        }
+      },
+      "encoded": {
+        "left": {
+          "lens_present": true,
+          "sphere": 0.0,
+          "cylinder": 0.0,
+          "axis": 0,
+          "rx_id": 694,
+          "axis_id": 7,
+          "cylinder_sign_flipped": false,
+          "rx_offset_id": 0,
+          "vr_add": 0.0,
+          "canonical": {
+            "sphere": 0.0,
+            "cylinder": 0.0,
+            "axis": 0
+          }
+        },
+        "right": {
+          "lens_present": true,
+          "sphere": 0.0,
+          "cylinder": 0.0,
+          "axis": 0,
+          "rx_id": 694,
+          "axis_id": 7,
+          "cylinder_sign_flipped": false,
+          "rx_offset_id": 0,
+          "vr_add": 0.0,
+          "canonical": {
+            "sphere": 0.0,
+            "cylinder": 0.0,
+            "axis": 0
+          }
+        }
+      },
+      "adjustments": [
+        {
+          "side": "right",
+          "field": "axis",
+          "entered": 180,
+          "encoded": 0,
+          "difference_degrees": 0,
+          "kind": "equivalent_axis_representation"
+        }
+      ]
+    },
+    {
+      "request": {
+        "op": "generate",
+        "secret_hex": "00010203040506070809",
+        "left": {
+          "sphere": -1,
+          "cylinder": -0.5,
+          "axis": 21
+        },
+        "right": {
+          "sphere": 2,
+          "cylinder": -1,
+          "axis": 90
+        }
+      },
+      "ok": true,
+      "payload_hex": "50311e2a1e0400010203040506070809",
+      "fields": {
+        "version": 5,
+        "lens_type": 3,
+        "random_bits": 0,
+        "left_rx_id": 143,
+        "left_axis_id": 5,
+        "left_cylinder_sign_flipped": 0,
+        "left_rx_offset_id": 0,
+        "right_rx_id": 542,
+        "right_axis_id": 1,
+        "right_cylinder_sign_flipped": 0,
+        "right_rx_offset_id": 0,
+        "secret_hex": "00010203040506070809"
+      },
+      "entered": {
+        "left": {
+          "sphere": -1.0,
+          "cylinder": -0.5,
+          "axis": 21,
+          "rx_offset_id": 0
+        },
+        "right": {
+          "sphere": 2.0,
+          "cylinder": -1.0,
+          "axis": 90,
+          "rx_offset_id": 0
+        }
+      },
+      "encoded": {
+        "left": {
+          "lens_present": true,
+          "sphere": -1.0,
+          "cylinder": -0.5,
+          "axis": 20,
+          "rx_id": 143,
+          "axis_id": 5,
+          "cylinder_sign_flipped": false,
+          "rx_offset_id": 0,
+          "vr_add": 0.0,
+          "canonical": {
+            "sphere": -1.0,
+            "cylinder": -0.5,
+            "axis": 20
+          }
+        },
+        "right": {
+          "lens_present": true,
+          "sphere": 2.0,
+          "cylinder": -1.0,
+          "axis": 92,
+          "rx_id": 542,
+          "axis_id": 1,
+          "cylinder_sign_flipped": false,
+          "rx_offset_id": 0,
+          "vr_add": 0.0,
+          "canonical": {
+            "sphere": 2.0,
+            "cylinder": -1.0,
+            "axis": 92
+          }
+        }
+      },
+      "adjustments": [
+        {
+          "side": "left",
+          "field": "axis",
+          "entered": 21,
+          "encoded": 20,
+          "difference_degrees": -1,
+          "axis_id": 5,
+          "policy": "native"
+        },
+        {
+          "side": "right",
+          "field": "axis",
+          "entered": 90,
+          "encoded": 92,
+          "difference_degrees": 2,
+          "axis_id": 1,
+          "policy": "native"
+        }
+      ]
+    },
+    {
+      "request": {
+        "op": "generate",
+        "secret_hex": "00010203040506070809",
+        "left": {
+          "sphere": 1,
+          "cylinder": 1,
+          "axis": 88
+        },
+        "right": null
+      },
+      "ok": true,
+      "payload_hex": "58343c38000000010203040506070809",
+      "fields": {
+        "version": 5,
+        "lens_type": 3,
+        "random_bits": 0,
+        "left_rx_id": 542,
+        "left_axis_id": 7,
+        "left_cylinder_sign_flipped": 1,
+        "left_rx_offset_id": 0,
+        "right_rx_id": 0,
+        "right_axis_id": 0,
+        "right_cylinder_sign_flipped": 0,
+        "right_rx_offset_id": 0,
+        "secret_hex": "00010203040506070809"
+      },
+      "entered": {
+        "left": {
+          "sphere": 1.0,
+          "cylinder": 1.0,
+          "axis": 88,
+          "rx_offset_id": 0
+        },
+        "right": null
+      },
+      "encoded": {
+        "left": {
+          "lens_present": true,
+          "sphere": 1.0,
+          "cylinder": 1.0,
+          "axis": 90,
+          "rx_id": 542,
+          "axis_id": 7,
+          "cylinder_sign_flipped": true,
+          "rx_offset_id": 0,
+          "vr_add": 0.0,
+          "canonical": {
+            "sphere": 2.0,
+            "cylinder": -1.0,
+            "axis": 0
+          }
+        },
+        "right": {
+          "lens_present": false
+        }
+      },
+      "adjustments": [
+        {
+          "side": "left",
+          "field": "axis",
+          "entered": 88,
+          "encoded": 90,
+          "difference_degrees": 2,
+          "axis_id": 7,
+          "policy": "native"
+        }
+      ]
+    },
+    {
+      "request": {
+        "op": "generate",
+        "secret_hex": "00010203040506070809",
+        "left": null,
+        "right": {
+          "sphere": -8,
+          "cylinder": -1,
+          "axis": 178,
+          "rx_offset_id": 2
+        }
+      },
+      "ok": true,
+      "payload_hex": "50b000009b1c00010203040506070809",
+      "fields": {
+        "version": 5,
+        "lens_type": 3,
+        "random_bits": 0,
+        "left_rx_id": 0,
+        "left_axis_id": 0,
+        "left_cylinder_sign_flipped": 0,
+        "left_rx_offset_id": 0,
+        "right_rx_id": 155,
+        "right_axis_id": 7,
+        "right_cylinder_sign_flipped": 0,
+        "right_rx_offset_id": 2,
+        "secret_hex": "00010203040506070809"
+      },
+      "entered": {
+        "left": null,
+        "right": {
+          "sphere": -8.0,
+          "cylinder": -1.0,
+          "axis": 178,
+          "rx_offset_id": 2
+        }
+      },
+      "encoded": {
+        "left": {
+          "lens_present": false
+        },
+        "right": {
+          "lens_present": true,
+          "sphere": -8.0,
+          "cylinder": -1.0,
+          "axis": 0,
+          "rx_id": 155,
+          "axis_id": 7,
+          "cylinder_sign_flipped": false,
+          "rx_offset_id": 2,
+          "vr_add": 0.5,
+          "canonical": {
+            "sphere": -8.0,
+            "cylinder": -1.0,
+            "axis": 0
+          }
+        }
+      },
+      "adjustments": [
+        {
+          "side": "right",
+          "field": "axis",
+          "entered": 178,
+          "encoded": 0,
+          "difference_degrees": 2,
+          "axis_id": 7,
+          "policy": "native"
+        }
+      ]
+    },
+    {
+      "request": {
+        "op": "generate",
+        "secret_hex": "00010203040506070809",
+        "left": {
+          "sphere": 2.25,
+          "cylinder": -4,
+          "axis": 160
+        },
+        "right": {
+          "sphere": 0.5,
+          "cylinder": -1.25,
+          "axis": 24
+        }
+      },
+      "ok": true,
+      "payload_hex": "503872eb79ac00010203040506070809",
+      "fields": {
+        "version": 5,
+        "lens_type": 3,
+        "random_bits": 0,
+        "left_rx_id": 1081,
+        "left_axis_id": 29,
+        "left_cylinder_sign_flipped": 0,
+        "left_rx_offset_id": 0,
+        "right_rx_id": 889,
+        "right_axis_id": 43,
+        "right_cylinder_sign_flipped": 0,
+        "right_rx_offset_id": 0,
+        "secret_hex": "00010203040506070809"
+      },
+      "entered": {
+        "left": {
+          "sphere": 2.25,
+          "cylinder": -4.0,
+          "axis": 160,
+          "rx_offset_id": 0
+        },
+        "right": {
+          "sphere": 0.5,
+          "cylinder": -1.25,
+          "axis": 24,
+          "rx_offset_id": 0
+        }
+      },
+      "encoded": {
+        "left": {
+          "lens_present": true,
+          "sphere": 2.25,
+          "cylinder": -4.0,
+          "axis": 160,
+          "rx_id": 1081,
+          "axis_id": 29,
+          "cylinder_sign_flipped": false,
+          "rx_offset_id": 0,
+          "vr_add": 0.0,
+          "canonical": {
+            "sphere": 2.25,
+            "cylinder": -4.0,
+            "axis": 160
+          }
+        },
+        "right": {
+          "lens_present": true,
+          "sphere": 0.5,
+          "cylinder": -1.25,
+          "axis": 24,
+          "rx_id": 889,
+          "axis_id": 43,
+          "cylinder_sign_flipped": false,
+          "rx_offset_id": 0,
+          "vr_add": 0.0,
+          "canonical": {
+            "sphere": 0.5,
+            "cylinder": -1.25,
+            "axis": 24
+          }
+        }
+      },
+      "adjustments": []
+    },
+    {
+      "request": {
+        "op": "generate",
+        "secret_hex": "00010203040506070809",
+        "left": {
+          "sphere": -2,
+          "cylinder": -1,
+          "axis": 21
+        },
+        "axis_policy": "exact"
+      },
+      "ok": false,
+      "error_message": "left: entered axis 21\u00b0 encodes as 20\u00b0 (-1\u00b0) under the native 4\u00b0 axis rule; exact policy rejected this input"
+    },
+    {
+      "request": {
+        "op": "generate",
+        "secret_hex": "00010203040506070809",
+        "left": {
+          "sphere": 3.75,
+          "cylinder": -4,
+          "axis": 160
+        }
+      },
+      "ok": false,
+      "error_message": "left: sphere +3.75 D / cylinder -4 D is not in the supported RX table; no clamping was applied"
+    }
+  ]
+}

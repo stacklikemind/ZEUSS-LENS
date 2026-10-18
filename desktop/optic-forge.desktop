@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ZEUSS LENS
+Comment=Local optical-code studio
+Exec=zeuss-lens
+Icon=optic-forge
+Type=Application
+Categories=Utility;
+Terminal=false

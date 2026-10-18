@@ -1,0 +1,109 @@
+name: GPUI desktop and browser builds
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['desktop/**', 'src/**', 'data/**', 'scripts/package-desktop.py', 'scripts/build-gpui-web.sh', '.github/workflows/desktop.yml', '.cargo/**']
+permissions:
+  contents: read
+jobs:
+  desktop:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: macos-latest, arch: ARM64, target: native }
+          - { os: macos-latest, arch: X64, target: x86_64-apple-darwin }
+          - { os: windows-latest, arch: X64, target: native }
+          - { os: ubuntu-24.04, arch: X64, target: native }
+    runs-on: ${{ matrix.os }}
+    env:
+      CARGO_PROFILE_DEV_DEBUG: '0'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Install Rust
+        shell: bash
+        run: |
+          rustup toolchain install nightly --profile minimal
+          rustup default nightly
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            desktop/target
+          key: gpui-${{ runner.os }}-${{ matrix.arch }}-${{ hashFiles('desktop/Cargo.lock') }}
+      - name: Linux system libraries
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc g++ clang libfontconfig-dev libwayland-dev libxkbcommon-x11-dev libx11-xcb-dev libssl-dev libzstd-dev libasound2-dev libvulkan1 libx11-dev libxcb1-dev libxkbcommon-dev libegl1-mesa-dev patchelf
+      - name: Test and build
+        shell: bash
+        run: |
+          cargo test --manifest-path desktop/Cargo.toml --locked --release --lib
+          if [ '${{ matrix.target }}' = x86_64-apple-darwin ]; then
+            rustup target add x86_64-apple-darwin
+            cargo build --manifest-path desktop/Cargo.toml --locked --release --target x86_64-apple-darwin --bin zeuss-lens
+          else
+            cargo build --manifest-path desktop/Cargo.toml --locked --release --bin zeuss-lens
+          fi
+      - name: Embedded engine smoke test
+        if: matrix.target == 'native'
+        shell: bash
+        run: desktop/target/release/zeuss-lens --self-test
+      - name: Package native executable
+        shell: bash
+        run: |
+          if [ '${{ matrix.target }}' = x86_64-apple-darwin ]; then
+            python scripts/package-desktop.py --binary desktop/target/x86_64-apple-darwin/release/zeuss-lens --arch x86_64
+          else
+            python scripts/package-desktop.py
+          fi
+      - name: Linux AppImage
+        if: runner.os == 'Linux'
+        env:
+          APPIMAGE_EXTRACT_AND_RUN: '1'
+          OUTPUT: zeuss-lens-linux-x86_64.AppImage
+        run: |
+          curl --fail --location https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage -o /tmp/linuxdeploy.AppImage
+          chmod +x /tmp/linuxdeploy.AppImage
+          mkdir -p /tmp/optic-forge.AppDir/usr/share/licenses/zeuss-lens
+          cp dist/THIRD-PARTY-NOTICES.txt /tmp/optic-forge.AppDir/usr/share/licenses/zeuss-lens/
+          /tmp/linuxdeploy.AppImage --appdir /tmp/optic-forge.AppDir --executable desktop/target/release/zeuss-lens --desktop-file desktop/optic-forge.desktop --icon-file desktop/optic-forge.svg --output appimage
+          mv "$OUTPUT" dist/
+          dist/zeuss-lens-linux-x86_64.AppImage --self-test
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: desktop-${{ runner.os }}-${{ matrix.arch }}
+          path: |
+            dist/*.zip
+            dist/*.tar.gz
+            dist/*.AppImage
+          if-no-files-found: error
+  web:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Install toolchain
+        run: |
+          rustup toolchain install nightly --profile minimal --target wasm32-unknown-unknown
+          rustup default nightly
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/bin/wasm-bindgen*
+            desktop/target
+          key: gpui-web-${{ hashFiles('desktop/Cargo.lock') }}
+      - name: Install matching bindings generator
+        run: |
+          if ! wasm-bindgen --version | grep -q '0.2.129'; then
+            cargo install wasm-bindgen-cli --version 0.2.129 --locked
+          fi
+      - name: Build GPUI WASM
+        run: ./scripts/build-gpui-web.sh
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: gpui-browser
+          path: web/gpui/
+          if-no-files-found: error

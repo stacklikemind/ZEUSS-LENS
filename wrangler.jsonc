@@ -1,0 +1,6 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "zeuss-lens",
+  "pages_build_output_dir": "./web",
+  "compatibility_date": "2026-10-18"
+}

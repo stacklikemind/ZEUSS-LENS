@@ -1,0 +1,17 @@
+{
+  "description": "Embedded numerical format tables",
+  "files": {
+    "clustering.json": {
+      "sha256": "39f25c126167b8c2281a25b210ec5018e3d85ad2270b4da52415291bef6cc6d7",
+      "bytes": 26132
+    },
+    "prescription.json": {
+      "sha256": "ba9274956793fd9c6070ea699fd3ef75995d83aff4f7227c9e10b419c4b55d26",
+      "bytes": 93269
+    },
+    "symbol.json": {
+      "sha256": "8153029bba1468c62c5b7891fd31b0073b54d50e8234ac36c3f1a132210e38e4",
+      "bytes": 1100
+    }
+  }
+}
