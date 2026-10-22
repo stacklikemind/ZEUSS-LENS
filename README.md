@@ -22,7 +22,11 @@ This is an independent, experimental project, unaffiliated with Apple or ZEISS. 
 
 ## Use the app
 
-Enter the right and left eye values. The code regenerates automatically whenever an input changes. Incomplete or unsupported inputs clear the previous code and show an error. Each optical field shows its minimum and maximum; sphere and cylinder ranges depend on the other value and use 0.25 D steps. The app checks the exact pair against its supported code table and never changes prescription values to make a code. A range alone does not mean every pair inside it is supported.
+Enter the prescription of your physical inserts for each eye. The **Code profile** preview shows your original values, the values that would be encoded, and the separate nominal calibration. Supported values regenerate automatically in the GPUI app. Incomplete inputs clear the previous code. Sphere and cylinder use 0.25 D steps; displayed table bounds depend on the other value and may have gaps.
+
+When a pair does not fit the exact code table, the app can offer an optional **approximate profile**: keep the entered sphere and cylinder notation, then reduce cylinder magnitude toward zero to the nearest encodable value. Select **Try approximate profile** to generate it. Editing any input clears that selection and the old code. If no profile can preserve the sphere, generation remains unavailable. This is an experimental encoding convenience, not a validated optical match or a promise of improved tracking.
+
+For example, entered **−11.00 / −3.75 × 170°** offers code values **−11.00 / −1.75 × 172°**, with nominal calibration **−10.00 / −1.75 D** when no VR add is supplied. The original prescription stays in the form and JSON export. Keep using physical inserts made for the actual prescription. After scanning, complete eye setup and check tracking in the center and near the edges; return to the previous setup if tracking is worse.
 
 These are the **encoder's representable values**, not a published numeric limit for all Apple Vision Pro prescriptions. Apple directs users to [ZEISS's prescription guide](https://www.zeiss.com/vision-care/us/zeiss-optical-inserts/prescription-guide.html) to check whether an actual prescription can be supplied as optical inserts. Code generation cannot establish lens eligibility or clinical suitability.
 
@@ -61,7 +65,7 @@ For public hosting, see [Cloudflare Pages deployment](docs/DEPLOYMENT.md). `./sc
 ## Browser behavior
 
 - The initial example has two present zero-power lenses, axis 0°, explicit VR add 0, and personal lens type. A present zero-power lens is distinct from an absent eye.
-- Sphere and cylinder must be exact 0.25 D increments supported by the finite optical table. Unsupported pairs are rejected. Optical values are never changed to obtain a valid topology.
+- Sphere and cylinder must be exact 0.25 D increments. Exact encoding is the default; unsupported pairs offer a previewed cylinder-reduction profile only when explicitly selected. The chosen profile never changes during topology retries.
 - Native axis policy permits the format's axis rounding and reports it. Exact policy rejects non-equivalent rounding. Axis 0° and 180° are equivalent. Positive cylinder inputs are canonicalized and displayed back in their original notation.
 - Each eye has an explicit VR add of 0, +0.25, +0.50, or +0.75 D. No age-based add is inferred.
 - Web Crypto creates a new 80-bit synthetic identity for each generation attempt. Only a `TOPOLOGY` error can trigger a retry, with a maximum of 64 identities total and unchanged optics. Advanced fixed-identity mode accepts exactly 20 hexadecimal characters and tries once, preserving that identity even if topology fails.
@@ -84,14 +88,15 @@ Operations:
 
 | `op` | Inputs | Purpose |
 | --- | --- | --- |
-| `generate` | `left`, `right`, `secret_hex`; optional `axis_policy`, `lens_type` | Encode version 5 optical inputs and render a circular symbol. |
+| `generate` | `left`, `right`, `secret_hex`; optional `axis_policy`, `diopter_policy`, `lens_type` | Encode version 5 optical inputs and render a circular symbol. |
 | `encode_payload` | `payload_hex`: exactly 32 hexadecimal characters | Render exactly 16 payload bytes without interpreting their version. |
 | `decode_symbol` | `gaps`: 128 binary values; `colors`: one binary value per visible arc | Validate/decode known symbol bits. This is not an image or camera scanner. |
 | `config` | No additional inputs | Return supported parameters and optical pairs. |
+| `review` | `left`, `right`; optional `axis_policy` | Preview both eyes, optional cylinder reduction, and nominal calibration without generating an identity or symbol. |
 
-Each eye is `{ "sphere": number, "cylinder": number, "axis": integer, "rx_offset_id": integer }`. Missing/null eyes are absent; at least one eye must be present. Offset defaults to 0, axis policy to `native`, and lens type to 3 (personal). Lens types 1 (reader) and 2 (developer) are also supported.
+Each eye is `{ "sphere": number, "cylinder": number, "axis": integer, "rx_offset_id": integer }`. Missing/null eyes are absent; at least one eye must be present. Offset defaults to 0, axis policy to `native`, diopter policy to `exact`, and lens type to 3 (personal). Explicit `diopter_policy: "reduce_cylinder"` preserves the entered sphere and reduces cylinder magnitude only when the original pair is unsupported. Result `profile_adjustments` records each cylinder change; `entered` retains the original values. Exact axis policy still applies to an approximate profile. Lens types 1 (reader) and 2 (developer) are also supported.
 
-Success is `{ "ok": true, "result": { ... } }`; failure is `{ "ok": false, "error": { "code": "...", "message": "..." } }`. Only the error code `TOPOLOGY` is retryable with a new identity. Generation results include `svg`, `payload_hex`, `outer_hex`, `gaps`, `colors`, `inverted`, `metadata`, `entered`, `encoded`, `calibration`, `warnings`, and `validation`. The complete behavior is specified in [spec/FORMAT.md](spec/FORMAT.md).
+Success is `{ "ok": true, "result": { ... } }`; failure is `{ "ok": false, "error": { "code": "...", "message": "..." } }`. Only the error code `TOPOLOGY` is retryable with a new identity. Generation results include `diopter_policy`, `profile_adjustments`, `svg`, `payload_hex`, `outer_hex`, `gaps`, `colors`, `inverted`, `metadata`, `entered`, `encoded`, `calibration`, `warnings`, and `validation`. The complete behavior is specified in [spec/FORMAT.md](spec/FORMAT.md).
 
 ## Raw WebAssembly ABI
 

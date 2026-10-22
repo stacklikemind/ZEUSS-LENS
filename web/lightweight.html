@@ -46,8 +46,16 @@
                 <label class="add-row"><span>Explicit VR add <small>No add is assumed.</small></span><select name="left_offset" aria-label="Left eye explicit VR add"><option value="0">0.00 D · none</option><option value="1">+0.25 D</option><option value="2">+0.50 D</option><option value="3">+0.75 D</option></select></label>
               </fieldset>
             </div>
-            <p class="field-help" id="optics-help">Sphere and cylinder use 0.25 D steps. Only pairs in this encoder’s code table can be generated; values are never approximated. This table does not determine Apple Vision Pro or ZEISS prescription eligibility. <a href="https://www.zeiss.com/vision-care/us/zeiss-optical-inserts/prescription-guide.html" target="_blank" rel="noopener noreferrer">Check the ZEISS prescription guide</a> for lens eligibility.</p>
+            <p class="field-help" id="optics-help">Enter the prescription of your physical inserts using 0.25 D steps. Keep your actual values here; the profile preview shows what the code can represent. The code table does not determine Apple Vision Pro or ZEISS prescription eligibility. <a href="https://www.zeiss.com/vision-care/us/zeiss-optical-inserts/prescription-guide.html" target="_blank" rel="noopener noreferrer">Check the ZEISS prescription guide</a> for lens eligibility.</p>
             <label class="policy-row" for="axis-policy"><span>Axis policy<small id="axis-help">Native uses the format’s 4° axis grid and reports rounding.</small></span><select name="axis_policy" id="axis-policy" aria-describedby="axis-help"><option value="native">Native · allow rounding</option><option value="exact">Exact · reject rounding</option></select></label>
+            <section id="profile-review" class="profile-review" aria-labelledby="profile-heading" aria-live="polite">
+              <div class="profile-heading"><h3 id="profile-heading">Code profile</h3><span id="profile-status">Loading…</span></div>
+              <p id="profile-explanation">Checking which values the code can represent.</p>
+              <div id="profile-values"></div>
+              <label class="approximation-choice" id="approximation-choice" hidden><input type="checkbox" name="allow_approximation" id="allow-approximation" aria-describedby="approximation-help"><span>Try the approximate profile shown above</span></label>
+              <p id="approximation-help" class="field-help" hidden>This changes the code only. Keep inserts made for your actual prescription. Tracking benefit is untested; editing any input clears this selection.</p>
+              <details id="profile-calibration"><summary>Nominal calibration values</summary><p>Firmware can adjust code values when selecting a built-in profile. Values below use minus-cylinder notation.</p><div id="profile-calibration-values"></div></details>
+            </section>
             <details class="advanced"><summary>Advanced settings<span aria-hidden="true">+</span></summary><div class="advanced-body">
               <label class="select-field">Lens type<select name="lens_type"><option value="3">Personal · 3</option><option value="1">Reader · 1</option><option value="2">Developer · 2</option></select></label>
               <label class="check-row"><input name="fixed_identity" type="checkbox"><span>Use a fixed synthetic identity<small>For reproducible tests. A fixed identity is never changed or retried.</small></span></label>
@@ -65,6 +73,7 @@
           <div class="preview-caption"><span id="symbol-caption">880 × 880 vector geometry</span><span id="attempt-caption">Fresh synthetic identity</span></div>
           <div class="download-buttons"><button type="button" id="download-svg" disabled>Download SVG <span>↙</span></button><button type="button" id="download-png" disabled>Download PNG <span>↙</span></button><button type="button" id="download-json" disabled aria-label="Download full JSON report">JSON <span>↙</span></button></div>
           <div class="hardware-note"><span class="notice-icon" aria-hidden="true">i</span><p><strong>Experimental, synthetic identity.</strong> Headset enrollment and camera detection are unverified. No authenticity or factory calibration is established.</p></div>
+          <div class="trial-note"><h3>Try it in Vision Pro</h3><p>Wear your inserts, scan during insert pairing, then complete eye setup. Check small targets in the center and near the edges. If tracking is worse, return to your previous setup. Scan acceptance alone does not establish tracking quality.</p></div>
         </section>
       </div>
       <section class="panel report-panel" aria-labelledby="report-title">

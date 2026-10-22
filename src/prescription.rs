@@ -21,6 +21,14 @@ pub enum AxisPolicy {
     Native,
 }
 
+#[derive(Deserialize, Serialize, Clone, Copy, PartialEq, Eq, Default)]
+#[serde(rename_all = "snake_case")]
+pub enum DiopterPolicy {
+    #[default]
+    Exact,
+    ReduceCylinder,
+}
+
 #[derive(Deserialize, Serialize)]
 pub struct RxEntry {
     pub id: u16,
@@ -71,10 +79,53 @@ fn quarter(value: f64, field: &str) -> Result<i32> {
     Ok((value * 100.0) as i32)
 }
 
+fn profile_input(input: &EyeInput, side: &str, policy: DiopterPolicy) -> Result<EyeInput> {
+    let sphere = quarter(input.sphere, &format!("{side} sphere"))?;
+    let cylinder = quarter(input.cylinder, &format!("{side} cylinder"))?;
+    let supported = |c: i32| {
+        let (s, c) = if c > 0 { (sphere + c, -c) } else { (sphere, c) };
+        tables()
+            .rx
+            .iter()
+            .any(|entry| entry.sphere_cd == s && entry.cylinder_cd == c)
+    };
+    if supported(cylinder) {
+        return Ok(input.clone());
+    }
+    if policy == DiopterPolicy::ReduceCylinder {
+        // Enumerate the finite code table, not an optical-distance model.
+        // Keep entered sphere/notation and reduce |cylinder| toward zero.
+        let candidate = tables()
+            .rx
+            .iter()
+            .map(|entry| {
+                if cylinder > 0 {
+                    (entry.sphere_cd + entry.cylinder_cd, -entry.cylinder_cd)
+                } else {
+                    (entry.sphere_cd, entry.cylinder_cd)
+                }
+            })
+            .filter(|(s, c)| *s == sphere && c.abs() < cylinder.abs())
+            .map(|(_, c)| c)
+            .max_by_key(|c| c.abs());
+        if let Some(c) = candidate {
+            return Ok(EyeInput {
+                cylinder: c as f64 / 100.0,
+                ..input.clone()
+            });
+        }
+        return Err(Error::input(format!("{side}: no encodable profile can keep sphere {:+.2} D while reducing cylinder. Check your entered values.", input.sphere)));
+    }
+    Err(Error::input(format!(
+        "{side} sphere/cylinder pair is absent from the supported prescription table"
+    )))
+}
+
 fn prepare_eye(
     input: Option<&EyeInput>,
     side: &str,
     policy: AxisPolicy,
+    diopter_policy: DiopterPolicy,
     warnings: &mut Vec<String>,
 ) -> Result<Eye> {
     let Some(input) = input else {
@@ -97,6 +148,11 @@ fn prepare_eye(
             "{side} rx_offset_id must be from 0 through 3"
         )));
     }
+    let selected = profile_input(input, side, diopter_policy)?;
+    if selected.cylinder != input.cylinder {
+        warnings.push(format!("{side}: experimental code profile changes cylinder from {:+.2} D to {:+.2} D while keeping sphere {:+.2} D. Physical inserts and entered values stay unchanged; tracking benefit is untested.", input.cylinder, selected.cylinder, input.sphere));
+    }
+    let input = &selected;
     let mut sphere = quarter(input.sphere, &format!("{side} sphere"))?;
     let mut cylinder = quarter(input.cylinder, &format!("{side} cylinder"))?;
     let mut axis = input.axis;
@@ -201,12 +257,33 @@ pub struct Prepared {
     pub encoded: Value,
     pub calibration: Value,
     pub warnings: Vec<String>,
+    pub profile_adjustments: Value,
 }
 
 pub fn prepare(
     left: Option<&EyeInput>,
     right: Option<&EyeInput>,
     policy: AxisPolicy,
+    lens_type: u8,
+    random_bits: u8,
+    secret_hex: &str,
+) -> Result<Prepared> {
+    prepare_with_policy(
+        left,
+        right,
+        policy,
+        DiopterPolicy::Exact,
+        lens_type,
+        random_bits,
+        secret_hex,
+    )
+}
+
+pub fn prepare_with_policy(
+    left: Option<&EyeInput>,
+    right: Option<&EyeInput>,
+    policy: AxisPolicy,
+    diopter_policy: DiopterPolicy,
     lens_type: u8,
     random_bits: u8,
     secret_hex: &str,
@@ -222,8 +299,16 @@ pub fn prepare(
     }
     let secret = bits::parse_hex::<10>(secret_hex, "secret_hex")?;
     let mut warnings = Vec::new();
-    let l = prepare_eye(left, "Left", policy, &mut warnings)?;
-    let r = prepare_eye(right, "Right", policy, &mut warnings)?;
+    let l = prepare_eye(left, "Left", policy, diopter_policy, &mut warnings)?;
+    let r = prepare_eye(right, "Right", policy, diopter_policy, &mut warnings)?;
+    let mut adjustments = Vec::new();
+    for (side, input, eye) in [("left", left, &l), ("right", right, &r)] {
+        if let Some(input) = input {
+            if eye.encoded["cylinder"] != json!(input.cylinder) {
+                adjustments.push(json!({"side":side,"field":"cylinder","entered":input.cylinder,"encoded":eye.encoded["cylinder"],"policy":"reduce_cylinder"}));
+            }
+        }
+    }
     let mut payload_bits = Vec::with_capacity(128);
     for (value, width) in [
         (5, 4),
@@ -250,7 +335,39 @@ pub fn prepare(
         encoded: json!({"left":l.encoded,"right":r.encoded}),
         calibration: json!({"left":l.calibration,"right":r.calibration}),
         warnings,
+        profile_adjustments: json!(adjustments),
     })
+}
+
+/// Review both eyes without entropy, a symbol, or a factory lookup.
+pub fn review(left: Option<&EyeInput>, right: Option<&EyeInput>, policy: AxisPolicy) -> Value {
+    let mut eyes = json!({});
+    let mut can_generate = left.is_some() || right.is_some();
+    let mut needs_approximation = false;
+    for (side, label, input) in [("left", "Left", left), ("right", "Right", right)] {
+        let mut warnings = Vec::new();
+        match prepare_eye(
+            input,
+            label,
+            policy,
+            DiopterPolicy::ReduceCylinder,
+            &mut warnings,
+        ) {
+            Ok(eye) => {
+                let approximate =
+                    input.is_some_and(|i| eye.encoded["cylinder"] != json!(i.cylinder));
+                needs_approximation |= approximate;
+                eyes[side] = json!({"status":if approximate {"approximate"} else {"exact"},"entered":input,"encoded":eye.encoded,"calibration":eye.calibration,"warnings":warnings});
+            }
+            Err(error) => {
+                can_generate = false;
+                eyes[side] =
+                    json!({"status":"unavailable","error":error.message,"code":error.code});
+            }
+        }
+    }
+    json!({"eyes":eyes,"can_generate":can_generate,"needs_approximation":needs_approximation,
+        "method":"Keep entered sphere and cylinder sign; reduce cylinder magnitude to the nearest encodable value toward zero. This is not a validated optical match."})
 }
 
 pub fn config() -> Value {
@@ -260,6 +377,7 @@ pub fn config() -> Value {
         "lens_types":[{"id":1,"name":"reader"},{"id":2,"name":"developer"},{"id":3,"name":"personal"}],
         "axis":{"min":0,"max":180,"integer":true,"canonical_step":4,"policies":["native","exact"],"default_policy":"native"},
         "diopter_step":0.25,"rx_offset_ids":[0,1,2,3],"rx_offset_diopters":[0.0,0.25,0.5,0.75],
+        "diopter_policies":["exact","reduce_cylinder"],"default_diopter_policy":"exact",
         "canonical_sphere_range":[-11.0,7.0],"canonical_cylinder_range":[-4.75,0.0],
         "supported_pairs":t.rx,"axis_table":t.axis,"calibration_limits":t.calibration_limits,
         "secret_bytes":10,"max_request_bytes":crate::MAX_REQUEST_BYTES,
@@ -278,6 +396,122 @@ mod tests {
             axis: a,
             rx_offset_id: 0,
         }
+    }
+    #[test]
+    fn approximate_profile_requires_opt_in_and_preserves_original() {
+        let input = eye(-11.0, -3.75, 170);
+        assert!(prepare(Some(&input), None, AxisPolicy::Native, 3, 0, SECRET).is_err());
+        let preview = review(Some(&input), None, AxisPolicy::Native);
+        assert_eq!(preview["can_generate"], true);
+        assert_eq!(preview["needs_approximation"], true);
+        let p = prepare_with_policy(
+            Some(&input),
+            None,
+            AxisPolicy::Native,
+            DiopterPolicy::ReduceCylinder,
+            3,
+            0,
+            SECRET,
+        )
+        .unwrap();
+        assert_eq!(p.entered["left"]["cylinder"], -3.75);
+        assert_eq!(p.encoded["left"]["sphere"], -11.0);
+        assert_eq!(p.encoded["left"]["cylinder"], -1.75);
+        assert_eq!(p.encoded["left"]["axis"], 172);
+        assert_eq!(p.calibration["left"]["sphere"], -10.0);
+        assert_eq!(preview["eyes"]["left"]["encoded"], p.encoded["left"]);
+        assert_eq!(
+            preview["eyes"]["left"]["calibration"],
+            p.calibration["left"]
+        );
+        assert_eq!(p.profile_adjustments[0]["entered"], -3.75);
+        assert_eq!(input.cylinder, -3.75);
+    }
+    #[test]
+    fn supported_pairs_stay_identical_with_experimental_policy() {
+        for entry in &tables().rx {
+            let input = eye(
+                entry.sphere_cd as f64 / 100.0,
+                entry.cylinder_cd as f64 / 100.0,
+                172,
+            );
+            let exact = prepare(Some(&input), None, AxisPolicy::Native, 3, 0, SECRET).unwrap();
+            let alternative = prepare_with_policy(
+                Some(&input),
+                None,
+                AxisPolicy::Native,
+                DiopterPolicy::ReduceCylinder,
+                3,
+                0,
+                SECRET,
+            )
+            .unwrap();
+            assert_eq!(exact.payload, alternative.payload);
+            assert_eq!(alternative.profile_adjustments, json!([]));
+            assert_eq!(
+                review(Some(&input), None, AxisPolicy::Native)["needs_approximation"],
+                false
+            );
+        }
+    }
+    #[test]
+    fn invalid_values_and_unavailable_spheres_have_no_profile() {
+        for input in [
+            eye(-20.0, -3.75, 170),
+            eye(-11.1, -3.75, 170),
+            eye(-11.0, -3.75, 181),
+            eye(-11.0, f64::NAN, 170),
+        ] {
+            assert_eq!(
+                review(Some(&input), None, AxisPolicy::Native)["can_generate"],
+                false
+            );
+            assert!(prepare_with_policy(
+                Some(&input),
+                None,
+                AxisPolicy::Native,
+                DiopterPolicy::ReduceCylinder,
+                3,
+                0,
+                SECRET
+            )
+            .is_err());
+        }
+        assert_eq!(
+            review(None, None, AxisPolicy::Native)["can_generate"],
+            false
+        );
+        assert_eq!(
+            review(Some(&eye(-11.0, -3.75, 170)), None, AxisPolicy::Exact)["can_generate"],
+            false
+        );
+    }
+    #[test]
+    fn positive_cylinder_and_independent_eyes_keep_notation_and_offsets() {
+        let left = eye(6.0, 4.0, 170);
+        let mut right = eye(-0.5, -2.75, 170);
+        right.rx_offset_id = 3;
+        let preview = review(Some(&left), Some(&right), AxisPolicy::Native);
+        let p = prepare_with_policy(
+            Some(&left),
+            Some(&right),
+            AxisPolicy::Native,
+            DiopterPolicy::ReduceCylinder,
+            3,
+            0,
+            SECRET,
+        )
+        .unwrap();
+        assert_eq!(p.encoded["left"]["sphere"], 6.0);
+        assert!(p.encoded["left"]["cylinder"].as_f64().unwrap() >= 0.0);
+        assert!(p.encoded["left"]["cylinder"].as_f64().unwrap() < 4.0);
+        assert_eq!(p.encoded["right"]["cylinder"], -2.75);
+        assert_eq!(p.encoded["right"]["rx_offset_id"], 3);
+        assert_eq!(
+            preview["eyes"]["right"]["calibration"],
+            p.calibration["right"]
+        );
+        assert_eq!(preview["eyes"]["right"]["status"], "exact");
     }
     #[test]
     fn absent_is_distinct_from_present_zero_power() {

@@ -18,6 +18,8 @@ struct Studio {
     exact: bool,
     fixed: bool,
     lens_type: u8,
+    profile: Option<Value>,
+    approximate: bool,
     output: Option<model::Output>,
     preview: Option<Arc<Image>>,
     coffee: Arc<Image>,
@@ -36,6 +38,8 @@ impl Studio {
             exact: false,
             fixed: false,
             lens_type: 3,
+            profile: None,
+            approximate: false,
             output: None,
             preview: None,
             coffee: Arc::new(Image::from_bytes(
@@ -57,6 +61,8 @@ impl Studio {
         this
     }
     fn invalidate(&mut self, cx: &mut Context<Self>) {
+        self.approximate = false;
+        self.profile = None;
         self.output = None;
         self.preview = None;
         self.generate(cx);
@@ -65,7 +71,7 @@ impl Studio {
         let mut eyes = vec![];
         for side in 0..2 {
             eyes.push(if self.present[side] {
-                model::eye(
+                model::entered_eye(
                     &(side * 4..side * 4 + 4)
                         .map(|i| self.inputs[i].read(cx).value().to_string())
                         .collect::<Vec<_>>(),
@@ -90,14 +96,33 @@ impl Studio {
             .then(|| self.inputs[8].read(cx).value().trim().to_string());
         self.output = None;
         self.preview = None;
-        match self.request(cx).and_then(|r| model::generate(r, fixed)) {
+        let generation = self.request(cx).and_then(|mut request| {
+            let profile = model::review(&request)?;
+            let can_generate = profile["can_generate"] == true;
+            let needs_approximation = profile["needs_approximation"] == true;
+            self.profile = Some(profile);
+            if !can_generate {
+                return Err("Check the prescription values in the code profile below.".into());
+            }
+            if needs_approximation && !self.approximate {
+                return Err("Your full prescription does not fit the code table. Review the optional approximate profile before trying it.".into());
+            }
+            request["diopter_policy"] = json!(if self.approximate {"reduce_cylinder"} else {"exact"});
+            model::generate(request, fixed)
+        });
+        match generation {
             Ok(output) => {
                 self.preview = Some(Arc::new(Image::from_bytes(
                     ImageFormat::Png,
                     output.png.clone(),
                 )));
                 self.status = format!(
-                    "Generated locally · {} identity attempt(s)",
+                    "{} · generated locally · {} identity attempt(s)",
+                    if self.approximate {
+                        "Approximate profile"
+                    } else {
+                        "Exact sphere / cylinder"
+                    },
                     output.attempts
                 );
                 self.output = Some(output);
@@ -105,6 +130,61 @@ impl Studio {
             Err(error) => self.status = error,
         }
         cx.notify();
+    }
+    fn profile_panel(&self, cx: &mut Context<Self>) -> Div {
+        let mut panel = div()
+            .flex()
+            .flex_col()
+            .gap_2()
+            .p_4()
+            .rounded_lg()
+            .bg(rgb(0x17251f));
+        panel = panel.child(div().text_lg().child("Code profile"));
+        let Some(profile) = &self.profile else {
+            return panel.child("Enter complete prescription values to review a profile.");
+        };
+        let approximate = profile["needs_approximation"] == true;
+        panel = panel.child(div().text_sm().text_color(rgb(if approximate {0xffcf87} else {0xb1c6b9})).child(
+            if approximate {"Optional approximation: keep your sphere and reduce cylinder magnitude to the nearest encodable value. Tracking benefit is untested."}
+            else {"Your insert prescription stays as entered. Code values and nominal calibration are shown separately."}));
+        for (side, label) in [("right", "Right / OD"), ("left", "Left / OS")] {
+            let eye = &profile["eyes"][side];
+            let mut row = div().flex().flex_col().gap_1().text_sm().child(label);
+            if let Some(error) = eye["error"].as_str() {
+                row = row.child(div().text_color(rgb(0xffcf87)).child(error.to_string()));
+            } else if eye["entered"].is_null() {
+                row = row.child("No lens present");
+            } else {
+                for (field, label) in [("entered", "Your inserts"), ("encoded", "In the code")] {
+                    let values = &eye[field];
+                    row = row.child(format!(
+                        "{label}: {:+.2} / {:+.2} / {}°",
+                        values["sphere"].as_f64().unwrap_or(0.0),
+                        values["cylinder"].as_f64().unwrap_or(0.0),
+                        values["axis"]
+                    ));
+                }
+                let calibration = &eye["calibration"];
+                row = row.child(div().text_color(rgb(0xb1c6b9)).child(
+                    if calibration["available"] == true {
+                        format!(
+                            "Nominal: {:+.2} / {:+.2} D (minus cylinder)",
+                            calibration["sphere"].as_f64().unwrap_or(0.0),
+                            calibration["cylinder"].as_f64().unwrap_or(0.0)
+                        )
+                    } else {
+                        "Nominal calibration unavailable for this pair".into()
+                    },
+                ));
+            }
+            panel = panel.child(row);
+        }
+        if approximate && profile["can_generate"] == true {
+            panel = panel.child(div().text_sm().child("This changes the code only. Keep inserts made for your actual prescription. Editing any input clears this selection."))
+                .child(Button::new("approximate-profile").label(if self.approximate {"Stop using approximate profile"} else {"Try approximate profile"})
+                    .on_click(cx.listener(|this,_,_,cx|{this.approximate=!this.approximate;this.generate(cx);})));
+        }
+        panel
     }
     #[cfg(not(target_family = "wasm"))]
     fn export(&mut self, extension: &'static str, cx: &mut Context<Self>) {
@@ -317,11 +397,12 @@ impl Render for Studio {
                 .child(div().flex().justify_between().items_center()
                     .child(div().text_2xl().child("ZEUSS LENS"))
                     .child(div().flex().gap_3().items_center().child(Button::new("coffee").h(px(60.)).p_0().child(img(self.coffee.clone()).w(px(217.)).h(px(60.)).object_fit(ObjectFit::Contain)).on_click(|_,_,cx|cx.open_url("https://www.buymeacoffee.com/stacklikemind")))))
-                .child(div().text_color(rgb(0xb1c6b9)).child("From optics to a circular code. Edit values to regenerate automatically."))
+                .child(div().text_color(rgb(0xb1c6b9)).child("Enter your physical insert prescription. Review the code profile; edit values to regenerate."))
                 .child(div().flex().gap_5().items_start().when(compact, |d|d.flex_col())
                     .child(div().w(px(450.)).when(compact,|d|d.w_full()).flex_shrink_0().flex().flex_col().gap_3()
                         .child(self.eye_panel(0,cx)).child(self.eye_panel(1,cx))
-                        .child(div().text_sm().child("Only pairs in this encoder's supported optical table can generate a code. Sphere / cylinder use 0.25 D steps; the displayed bounds depend on the other value and have gaps. Axis is 0–180° (native encoding uses 4° steps); VR add is 0–0.75 D. This table is not an Apple or ZEISS prescription eligibility test."))
+                        .child(div().text_sm().child("Keep your actual prescription in these fields. Sphere / cylinder use 0.25 D steps. The bounds describe the exact code table; unsupported pairs may offer an optional approximation. This table is not an Apple or ZEISS prescription eligibility test."))
+                        .child(self.profile_panel(cx))
                         .child(Button::new("axis-policy").label(if self.exact {"Axis: exact (reject rounding)"} else {"Axis: native (report rounding)"})
                             .on_click(cx.listener(|this,_,_,cx|{this.exact=!this.exact;this.invalidate(cx);})))
                         .child(Button::new("lens-type").label(format!("Lens type: {}",match self.lens_type {1=>"reader",2=>"developer",_=>"personal"}))
@@ -336,6 +417,7 @@ impl Render for Studio {
                                 .on_click(cx.listener(move |this,_,_,cx|this.export(ext,cx)))
                         })))
                         .child(div().text_sm().text_color(rgb(0xb1c6b9)).child("Synthetic identities do not establish authenticity or factory calibration. No inputs are uploaded or saved automatically."))))
+                .child(div().text_sm().text_color(rgb(0xb1c6b9)).child("To try a code: wear your inserts, scan during insert pairing, then complete eye setup. Check small targets in the center and near the edges. If tracking is worse, return to your previous setup. Scan acceptance alone does not establish tracking quality."))
                 .child(div().p_3().rounded_md().bg(rgb(0x243c2e)).child(self.status.clone()))
                 .child(self.report())
 )

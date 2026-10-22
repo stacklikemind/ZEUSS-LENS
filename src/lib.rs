@@ -5,7 +5,7 @@ mod symbol;
 #[cfg(target_arch = "wasm32")]
 mod wasm;
 
-use prescription::{AxisPolicy, EyeInput};
+use prescription::{AxisPolicy, DiopterPolicy, EyeInput};
 use serde::Deserialize;
 use serde_json::{json, Value};
 
@@ -52,6 +52,14 @@ fn default_lens_type() -> u8 {
 #[serde(tag = "op", rename_all = "snake_case", deny_unknown_fields)]
 enum Request {
     Config {},
+    Review {
+        #[serde(default)]
+        left: Option<EyeInput>,
+        #[serde(default)]
+        right: Option<EyeInput>,
+        #[serde(default)]
+        axis_policy: AxisPolicy,
+    },
     Generate {
         #[serde(default)]
         left: Option<EyeInput>,
@@ -59,6 +67,8 @@ enum Request {
         right: Option<EyeInput>,
         #[serde(default)]
         axis_policy: AxisPolicy,
+        #[serde(default)]
+        diopter_policy: DiopterPolicy,
         #[serde(default = "default_lens_type")]
         lens_type: u8,
         #[serde(default)]
@@ -77,6 +87,15 @@ enum Request {
 fn execute(request: Request) -> Result<Value> {
     match request {
         Request::Config {} => Ok(prescription::config()),
+        Request::Review {
+            left,
+            right,
+            axis_policy,
+        } => Ok(prescription::review(
+            left.as_ref(),
+            right.as_ref(),
+            axis_policy,
+        )),
         Request::EncodePayload { payload_hex } => {
             symbol::encode(&bits::parse_hex(&payload_hex, "payload_hex")?)
         }
@@ -85,23 +104,38 @@ fn execute(request: Request) -> Result<Value> {
             left,
             right,
             axis_policy,
+            diopter_policy,
             lens_type,
             random_bits,
             secret_hex,
         } => {
-            let prepared = prescription::prepare(
-                left.as_ref(),
-                right.as_ref(),
-                axis_policy,
-                lens_type,
-                random_bits,
-                &secret_hex,
-            )?;
+            let prepared = if diopter_policy == DiopterPolicy::Exact {
+                prescription::prepare(
+                    left.as_ref(),
+                    right.as_ref(),
+                    axis_policy,
+                    lens_type,
+                    random_bits,
+                    &secret_hex,
+                )?
+            } else {
+                prescription::prepare_with_policy(
+                    left.as_ref(),
+                    right.as_ref(),
+                    axis_policy,
+                    diopter_policy,
+                    lens_type,
+                    random_bits,
+                    &secret_hex,
+                )?
+            };
             let mut result = symbol::encode(&prepared.payload)?;
             result["entered"] = prepared.entered;
             result["encoded"] = prepared.encoded;
             result["calibration"] = prepared.calibration;
             result["warnings"] = json!(prepared.warnings);
+            result["profile_adjustments"] = prepared.profile_adjustments;
+            result["diopter_policy"] = json!(diopter_policy);
             result["payload_version"] = json!(5);
             result["lens_type"] = json!(lens_type);
             result["random_bits"] = json!(random_bits);

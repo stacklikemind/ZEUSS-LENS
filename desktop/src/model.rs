@@ -7,7 +7,8 @@ pub struct Output {
     pub attempts: usize,
 }
 
-pub fn eye(values: &[String]) -> Result<Value, String> {
+/// Parse actual insert values; the engine separately reviews representability.
+pub fn entered_eye(values: &[String]) -> Result<Value, String> {
     let number = |index: usize, label: &str| -> Result<f64, String> {
         let n: f64 = values[index]
             .trim()
@@ -28,35 +29,24 @@ pub fn eye(values: &[String]) -> Result<Value, String> {
     if !(0.0..=0.75).contains(&add) || (add * 4.0).fract() != 0.0 {
         return Err("VR add must be 0, 0.25, 0.50 or 0.75 D".into());
     }
-    let sphere_cd = quarter_centidiopters(sphere, "Sphere")?;
-    let cylinder_cd = quarter_centidiopters(cylinder, "Cylinder")?;
-    if !supported_pairs().contains(&(sphere_cd, cylinder_cd)) {
-        let mut choices: Vec<_> = supported_pairs()
-            .iter()
-            .filter(|(s, _)| *s == sphere_cd)
-            .map(|(_, c)| *c)
-            .collect();
-        choices.sort_unstable();
-        choices.dedup();
-        let detail = if choices.is_empty() {
-            format!("Sphere {sphere:+.2} D has no entries in the supported table")
-        } else {
-            format!(
-                "At sphere {sphere:+.2} D, supported cylinder values: {}",
-                choices
-                    .iter()
-                    .map(|c| format!("{:+.2}", *c as f64 / 100.0))
-                    .collect::<Vec<_>>()
-                    .join(", ")
-            )
-        };
-        return Err(format!(
-            "Sphere {sphere:+.2} D / cylinder {cylinder:+.2} D is outside the encoder's supported optical table. {detail}. Values are never changed automatically."
-        ));
-    }
+    quarter_centidiopters(sphere, "Sphere")?;
+    quarter_centidiopters(cylinder, "Cylinder")?;
     Ok(
         json!({"sphere":sphere,"cylinder":cylinder,"axis":axis as u16,"rx_offset_id":(add*4.0) as u8}),
     )
+}
+
+pub fn review(request: &Value) -> Result<Value, String> {
+    let response: Value = serde_json::from_str(&vision_code_wasm::process_json(
+        json!({"op":"review","left":request["left"],"right":request["right"],"axis_policy":request["axis_policy"]}).to_string().as_bytes()
+    )).map_err(|error| error.to_string())?;
+    if response["ok"] != true {
+        return Err(response["error"]["message"]
+            .as_str()
+            .unwrap_or("Profile check failed")
+            .to_owned());
+    }
+    Ok(response["result"].clone())
 }
 
 fn quarter_centidiopters(value: f64, name: &str) -> Result<i32, String> {
@@ -176,6 +166,39 @@ pub fn self_test() -> Result<(), String> {
 mod tests {
     use super::*;
     #[test]
+    fn preview_and_export_keep_actual_insert_prescription() {
+        let entered = entered_eye(&["-11", "-3.75", "170", "0"].map(String::from)).unwrap();
+        let mut request = neutral_request();
+        request["left"] = entered.clone();
+        let preview = review(&request).unwrap();
+        assert_eq!(preview["needs_approximation"], true);
+        assert_eq!(preview["eyes"]["left"]["encoded"]["cylinder"], -1.75);
+        assert!(generate_with(
+            request.clone(),
+            Some("00010203040506070809".into()),
+            || panic!("fixed identity")
+        )
+        .is_err());
+        request["diopter_policy"] = json!("reduce_cylinder");
+        let mut identity = 0;
+        let output = generate_with(request, None, || {
+            identity += 1;
+            Ok(format!("{identity:020x}"))
+        })
+        .unwrap();
+        assert_eq!(output.report["request"]["left"], entered);
+        assert_eq!(output.report["result"]["entered"]["left"], entered);
+        assert_eq!(
+            output.report["result"]["encoded"]["left"]["cylinder"],
+            -1.75
+        );
+        assert_eq!(
+            output.report["result"]["validation"]["payload_roundtrip"],
+            true
+        );
+        assert!(!output.png.is_empty());
+    }
+    #[test]
     fn packaged_engine_and_png_round_trip() {
         self_test().unwrap();
     }
@@ -207,15 +230,19 @@ mod tests {
             ["0", "0", "1.5", "0"],
             ["0", "0", "0", "0.1"],
         ] {
-            assert!(eye(&values.map(String::from)).is_err());
+            assert!(entered_eye(&values.map(String::from)).is_err());
         }
-        assert!(eye(&["-1.25", "-0.5", "170", "0.25"].map(String::from)).is_ok());
+        assert!(entered_eye(&["-1.25", "-0.5", "170", "0.25"].map(String::from)).is_ok());
         for values in [
             ["-8.50", "-4.00", "12", "0"],
             ["-8.00", "-3.50", "173", "0"],
         ] {
-            let error = eye(&values.map(String::from)).unwrap_err();
-            assert!(error.contains("outside the encoder's supported optical table"));
+            let entered = entered_eye(&values.map(String::from)).unwrap();
+            let mut request = neutral_request();
+            request["left"] = entered;
+            let profile = review(&request).unwrap();
+            assert_eq!(profile["needs_approximation"], true);
+            assert_eq!(profile["can_generate"], true);
         }
     }
 }

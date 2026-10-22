@@ -17,7 +17,7 @@ This document explains the stages. The authoritative behavioral details are in [
 
 ## 1. Validate and represent the optical inputs
 
-Each present eye supplies sphere, cylinder, axis, and an explicit VR add. Sphere and cylinder must be exact quarter-diopter increments. The supported sphere/cylinder pairs come from a finite numeric lookup table; the pair's identifier is an arbitrary format value, not a diopter formula. Unsupported pairs are rejected instead of approximated.
+Each present eye supplies sphere, cylinder, axis, and an explicit VR add. Sphere and cylinder must be exact quarter-diopter increments. The supported sphere/cylinder pairs come from a finite numeric lookup table; the pair's identifier is an arbitrary format value, not a diopter formula. Unsupported pairs are rejected by default. The optional `reduce_cylinder` policy keeps entered sphere and cylinder notation and reduces cylinder magnitude to the nearest encodable value toward zero. Interfaces preview that difference and require an explicit selection; edits clear it. Original inputs remain in `entered`, the code values in `encoded`, and cylinder changes in `profile_adjustments`. This is an experimental encoding rule, not a validated optical similarity metric.
 
 The table uses non-positive cylinder notation. Positive-cylinder input is transposed before lookup:
 

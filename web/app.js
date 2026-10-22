@@ -10,6 +10,54 @@ let previewURL;
 let busy = false;
 let dirty = false;
 let supportedPairs = [];
+let profile = null;
+
+function updateGenerateButton() {
+  const approximate = profile?.needs_approximation && fields.allow_approximation.checked;
+  $('#generate-button').disabled = busy || !engine || !profile?.can_generate || (profile.needs_approximation && !approximate);
+  $('#generate-button span').textContent = busy ? 'Generating locally…' : approximate ? 'Generate approximate code' : 'Generate code';
+}
+function reviewProfile() {
+  if (!engine) return;
+  try {
+    const response = engine.process({op:'review', right:eyeRequest('right'), left:eyeRequest('left'), axis_policy:fields.axis_policy.value});
+    if (!response.ok) throw new Error(response.error?.message || 'Profile check failed.');
+    profile = response.result;
+    $('#profile-status').textContent = !profile.can_generate ? 'Check values' : profile.needs_approximation ? 'Approximation available' : 'Values fit the format';
+    $('#profile-explanation').textContent = !profile.can_generate ? 'Review the values below before generating a code.' : profile.needs_approximation ? 'Your full prescription does not fit the code table. This optional profile keeps your sphere and reduces cylinder magnitude to the nearest encodable value. It is an experimental starting point.' : 'Your sphere and cylinder fit the code table. Any axis rounding is shown below.';
+    $('#profile-review').classList.toggle('approximate', profile.needs_approximation);
+    $('#profile-values').replaceChildren(); $('#profile-calibration-values').replaceChildren();
+    for (const [side, label] of [['right','Right · OD'],['left','Left · OS']]) {
+      const eye = profile.eyes[side];
+      const card = document.createElement('div'); card.className = 'profile-eye';
+      const title = document.createElement('h4'); title.textContent = label; card.append(title);
+      if (eye.error) {const p = document.createElement('p'); p.textContent = eye.error; card.append(p);}
+      else if (!eye.entered) card.append('No lens present');
+      else {
+        const list = document.createElement('dl');
+        for (const [field,name] of [['entered','Your inserts'],['encoded','In the code']]) {
+          const row = document.createElement('div'), term = document.createElement('dt'), value = document.createElement('dd');
+          term.textContent = name; value.textContent = `${diopters(eye[field].sphere)} / ${diopters(eye[field].cylinder)} / ${axis(eye[field].axis)}`;
+          row.append(term,value); list.append(row);
+        }
+        card.append(list);
+        const calibration = document.createElement('p');
+        calibration.textContent = eye.calibration?.available ? `${label}: ${diopters(eye.calibration.sphere)} / ${diopters(eye.calibration.cylinder)} D` : `${label}: nominal calibration unavailable for this pair.`;
+        $('#profile-calibration-values').append(calibration);
+      }
+      $('#profile-values').append(card);
+    }
+    $('#profile-calibration').hidden = !$('#profile-calibration-values').children.length;
+  } catch (error) {
+    profile = null;
+    $('#profile-status').textContent = 'Check values';
+    $('#profile-explanation').textContent = error.message;
+    $('#profile-values').replaceChildren(); $('#profile-calibration').hidden = true;
+    $('#profile-review').classList.remove('approximate');
+  }
+  $('#approximation-choice').hidden = $('#approximation-help').hidden = !profile?.can_generate || !profile?.needs_approximation;
+  updateGenerateButton();
+}
 
 function updateOpticalLimits() {
   if (!supportedPairs.length) return;
@@ -25,10 +73,9 @@ function updateOpticalLimits() {
         .filter(pair => !Number.isFinite(other) || pair[1 - index] === other)
         .map(pair => pair[index]);
       if (allowed.length) {
-        input.min = String(Math.min(...allowed));
-        input.max = String(Math.max(...allowed));
+        input.removeAttribute('min'); input.removeAttribute('max');
         $(`#${side}-${field}-range`).textContent =
-          `Code table: ${input.min} to ${input.max} D; 0.25 D steps with gaps.`;
+          `Exact code table: ${Math.min(...allowed)} to ${Math.max(...allowed)} D; 0.25 D steps with gaps.`;
       } else {
         input.removeAttribute('min');
         input.removeAttribute('max');
@@ -36,10 +83,6 @@ function updateOpticalLimits() {
       }
     }
     cylinder.setCustomValidity('');
-    if (values.every(Number.isFinite) && values.every(value => value * 4 === Math.trunc(value * 4)) &&
-        !supportedPairs.some(([s, c]) => s === values[0] && c === values[1])) {
-      cylinder.setCustomValidity(`${side === 'right' ? 'Right' : 'Left'} sphere/cylinder pair is not in the encoder's supported code table. Values are never changed automatically.`);
-    }
   }
 }
 
@@ -65,18 +108,19 @@ function syncPresence() {
   fields.secret_hex.disabled = !fixed;
   fields.secret_hex.required = fixed;
 }
-function markDirty() {
+function markDirty(event) {
+  if (event?.target !== fields.allow_approximation) fields.allow_approximation.checked = false;
   syncPresence();
   updateOpticalLimits();
   hideError();
   dirty = true;
-  if (latest) {
-    setBadge('Inputs changed', 'stale');
-    $('#report-status').textContent = 'Previous result · regenerate';
-    $('#symbol-image').alt = 'Previous circular optical code; inputs have changed. Generate again to update.';
-    downloadButtons.forEach(button => { button.disabled = true; });
-    announce('Inputs changed. Generate again to update the preview and downloads.');
-  }
+  latest = null;
+  if (previewURL) { URL.revokeObjectURL(previewURL); previewURL = null; }
+  $('#symbol-image').hidden = true; $('#preview-placeholder').hidden = false;
+  $('#report-content').hidden = true; $('#report-placeholder').hidden = false;
+  setBadge('Inputs changed', 'stale'); $('#report-status').textContent = 'Generate to review this code';
+  downloadButtons.forEach(button => { button.disabled = true; });
+  reviewProfile();
 }
 form.addEventListener('input', markDirty);
 form.addEventListener('change', markDirty);
@@ -224,7 +268,7 @@ function renderResult(run) {
   previewURL = url;
   image.hidden = false;
   $('#preview-placeholder').hidden = true;
-  setBadge('Generated locally', 'generated');
+  setBadge(result.profile_adjustments?.length ? 'Approximate · generated locally' : 'Generated locally', 'generated');
   $('#symbol-caption').textContent = `880 × 880 · ${result.colors?.length ?? '—'} visible arcs`;
   $('#attempt-caption').textContent = run.identity_mode === 'fixed' ? 'Fixed identity · 1 attempt' : `Fresh identity · ${run.attempts} ${run.attempts === 1 ? 'attempt' : 'attempts'}`;
   renderWarnings(result);
@@ -244,7 +288,7 @@ function renderResult(run) {
 }
 async function generate(event) {
   event?.preventDefault();
-  if (!engine || busy || !form.reportValidity()) return;
+  if (!engine || busy || !profile?.can_generate || (profile.needs_approximation && !fields.allow_approximation.checked) || !form.reportValidity()) return;
   hideError();
   busy = true;
   $('#generate-button').disabled = true;
@@ -254,7 +298,7 @@ async function generate(event) {
     // Yield for the busy state before reading inputs. Capture and process remain synchronous.
     await new Promise(resolve => requestAnimationFrame(resolve));
     if (!form.reportValidity()) return;
-    const optics = { op: 'generate', right: eyeRequest('right'), left: eyeRequest('left'), axis_policy: fields.axis_policy.value, lens_type: Number(fields.lens_type.value) };
+    const optics = { op: 'generate', right: eyeRequest('right'), left: eyeRequest('left'), axis_policy: fields.axis_policy.value, diopter_policy:fields.allow_approximation.checked ? 'reduce_cylinder' : 'exact', lens_type: Number(fields.lens_type.value) };
     if (!optics.left && !optics.right) throw new Error('At least one eye must be present.');
     const fixedIdentity = fields.fixed_identity.checked ? fields.secret_hex.value.trim().toLowerCase() : null;
     if (fixedIdentity !== null && !/^[0-9a-f]{20}$/.test(fixedIdentity)) throw new Error('A fixed identity must contain exactly 20 hexadecimal characters.');
@@ -276,8 +320,7 @@ async function generate(event) {
     dirty = true;
   } finally {
     busy = false;
-    $('#generate-button').disabled = false;
-    $('#generate-button span').textContent = 'Generate code';
+    updateGenerateButton();
   }
 }
 form.addEventListener('submit', generate);
@@ -346,9 +389,10 @@ try {
     return [[sphere, cylinder], [sphere + cylinder, -cylinder]];
   });
   updateOpticalLimits();
+  reviewProfile();
   $('#engine-status').classList.add('ready');
   $('#engine-status').lastChild.textContent = 'Local engine ready';
-  $('#generate-button').disabled = false;
+  updateGenerateButton();
   await generate();
 } catch (error) {
   $('#engine-status').classList.add('failed');

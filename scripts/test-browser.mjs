@@ -49,6 +49,25 @@ if (bytes) {
   const { instance } = await WebAssembly.instantiate(bytes, {});
   const client = new WasmClient(instance);
   assert.equal(client.process({ op: 'config' }).ok, true);
+  const unsupported = {op:'generate', left:{sphere:-11,cylinder:-3.75,axis:170,rx_offset_id:0}, right:null, axis_policy:'native'};
+  const preview = client.process({op:'review', left:unsupported.left, right:null, axis_policy:'native'});
+  assert.equal(preview.ok,true);
+  assert.equal(preview.result.needs_approximation,true);
+  assert.equal(preview.result.eyes.left.encoded.cylinder,-1.75);
+  assert.equal(preview.result.eyes.left.calibration.sphere,-10);
+  assert.equal('payload_hex' in preview.result,false);
+  assert.equal(generateWithRetries(client,unsupported,null,identity).response.ok,false);
+  const approximate = generateWithRetries(client,{...unsupported,diopter_policy:'reduce_cylinder'},null,identity);
+  assert.equal(approximate.response.ok,true);
+  assert.equal(approximate.request.left.cylinder,-3.75);
+  assert.equal(approximate.response.result.entered.left.cylinder,-3.75);
+  assert.equal(approximate.response.result.encoded.left.cylinder,-1.75);
+  assert.equal(approximate.response.result.encoded.left.axis,172);
+  assert.equal(approximate.response.result.profile_adjustments[0].entered,-3.75);
+  assert.equal(client.process({op:'review',left:unsupported.left,axis_policy:'exact'}).result.can_generate,false);
+  assert.equal(client.process({op:'review',left:{...unsupported.left,sphere:-20}}).result.can_generate,false);
+  assert.equal(client.process({op:'review'}).result.can_generate,false);
+  console.log('Built WASM: explicit approximation, entered values, calibration preview, exact-axis rejection and unavailable profiles passed.');
   const fixtures = JSON.parse(await readFile(new URL('../fixtures/symbols.json', import.meta.url), 'utf8'));
   for (const fixture of fixtures.vectors) {
     const response = client.process({ op: 'encode_payload', payload_hex: fixture.payload_hex });
