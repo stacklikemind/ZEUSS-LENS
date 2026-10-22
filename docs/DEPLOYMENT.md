@@ -8,9 +8,11 @@ The application is a static Cloudflare Pages site. Cloudflare serves HTML, CSS, 
 - Alternate GPUI path: https://zeuss-lens.pages.dev/gpui/
 - Lightweight frontend: https://zeuss-lens.pages.dev/lightweight.html
 - Encoder-only module: https://zeuss-lens.pages.dev/vision_code.wasm
-- Production deployment: https://1b02e141.zeuss-lens.pages.dev/
+- Production deployment: https://0d75cbdb.zeuss-lens.pages.dev/
 
-Deployed on 18 October 2026. GPUI WASM SHA-256: `06016b36ac9ee27aa1cc00c688884ba785cd23273e7b543deeaa59f01c9024c1`.
+Deployed on 22 October 2026 from source commit `8cee1ddbe0a5047187788aeadaf1ab27c26ca779`. GPUI WASM SHA-256: `1897ad7f9c3fb492a47a2b85bfe4d9286621f8ba5ef541a2fa48e42e78325abf`. Encoder-only WASM SHA-256: `40da098b570a1045797a0169cacd6e07656551636216576d520c347bde7188af`.
+
+Production root HTML, both GPUI WASM paths, encoder-only WASM, lightweight HTML and its JavaScript were downloaded and matched the local build byte for byte. The live GPUI app also displayed the optional −11.00 / −1.75 profile for an entered −11.00 / −3.75 prescription and generated a code after explicit selection. This verifies deployed behavior, not physical headset acceptance or tracking quality.
 
 The former Pages address redirects to this project.
 
